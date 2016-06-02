@@ -62,6 +62,12 @@ $i = 1;
         $item = explode("\t", $row);
         $filterItem = array();
         foreach($item as $colKey => $col) {
+          switch($header[$colKey]) {
+            case 'ID':
+              $col = (int)trim($col);
+            break;
+          }
+
           $filterItem[$header[$colKey]] = $col;
         }
 
