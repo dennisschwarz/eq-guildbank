@@ -149,11 +149,14 @@ $i = 1;
     if(!empty($items) && count($items) > 0) {
       $result = array();
       if(!empty($filter)) {
+        if(isset($filter['showEmpty']) && $filter['showEmpty'] == 1) {
+          $result[] = $item;
+        }
       } else {
         foreach($items as $itemKey => $item) {
-//           if(isset($item['name']) && strtolower($item['name']) != 'empty') {
+          if(isset($item['name']) && strtolower($item['name']) != 'empty') {
             $result[] = $item;
-//           }
+          }
         }
       }
       return $result;

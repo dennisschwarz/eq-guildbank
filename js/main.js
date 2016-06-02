@@ -10,7 +10,7 @@ $(document).ready(function() {
     success: function(event, response) {
       var self = this;
       if(event.status == 'success') {
-        if(response.length > 0) {
+        if(response.length > 0 && response != '') {
           var items = $.parseJSON(response);
           populateList(items);
         }
@@ -48,8 +48,12 @@ $(document).ready(function() {
         }
         $("#parse-result").append($header, $list);
       }
-      $("div#file-upload-container").reset();
+//       $("div#file-upload-container").reset();
     }
   }
+
+  $("#parse-result h4").on("click", function() {
+    $(this).next("ul").toggle();
+  });
 
 });
