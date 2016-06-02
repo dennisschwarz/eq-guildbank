@@ -39,7 +39,7 @@
               <?php
               require_once('include/EQParser.php');
               $eqParser = new EQParser;
-              $charInv = file_get_contents('./upload/Wulfher-inventory.txt');
+              $charInv = file_get_contents('./upload/Caerbank-Inventory.txt');
               $eqParser->parseFile($charInv);
               $characterItems = $eqParser->getCharacterItems();
               $inventoryItems = $eqParser->getInventoryItems();

@@ -19,7 +19,7 @@ class EQParser {
   );
 
   public function __construct() {
-    $this->_generateDB();
+//     $this->_generateDB();
   }
 
   private function _generateDB() {
