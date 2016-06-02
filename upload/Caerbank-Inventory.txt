@@ -1,424 +1,424 @@
-Location   Name   ID   Count   Slots
-Charm   Empty   0   0   0
-Ear   Empty   0   0   0
-Head   Skull-shaped Barbute   4301   1   6
-Head-Slot1   Empty   0   0   0
-Head-Slot2   Empty   0   0   0
-Face   Worked Dragonskin Mask   27114   1   6
-Face-Slot1   Empty   0   0   0
-Ear   Empty   0   0   0
-Neck   Empty   0   0   0
-Shoulders   Empty   0   0   0
-Arms   Mithril Vambraces   4411   1   6
-Arms-Slot1   Empty   0   0   0
-Arms-Slot2   Empty   0   0   0
-Back   Empty   0   0   0
-Wrist   Empty   0   0   0
-Wrist   Empty   0   0   0
-Range   Gloomingdeep Lantern   9979   1   6
-Range-Slot1   Empty   0   0   0
-Hands   Empty   0   0   0
-Primary   Empty   0   0   0
-Secondary   Empty   0   0   0
-Fingers   Empty   0   0   0
-Fingers   Empty   0   0   0
-Chest   Empty   0   0   0
-Legs   Empty   0   0   0
-Feet   Empty   0   0   0
-Waist   Empty   0   0   0
-Power Source   Empty   0   0   0
-Ammo   Empty   0   0   0
-General1   Backpack*   32601   1   8
-General1-Slot1   Heavy Dragonleg Breeches   27130   1   6
-General1-Slot1-Slot1   Empty   0   0   0
-General1-Slot1-Slot2   Empty   0   0   0
-General1-Slot2   Heavy Dragonskin Mask   27136   1   6
-General1-Slot2-Slot1   Empty   0   0   0
-General1-Slot3   Light Velium Warsword   27003   1   6
-General1-Slot3-Slot1   Empty   0   0   0
-General1-Slot3-Slot2   Empty   0   0   0
-General1-Slot4   Reinforced Dragonspine Vambraces   27123   1   6
-General1-Slot4-Slot1   Empty   0   0   0
-General1-Slot4-Slot2   Empty   0   0   0
-General1-Slot5   Silver Etched Warhammer   6653   1   6
-General1-Slot5-Slot1   Empty   0   0   0
-General1-Slot5-Slot2   Empty   0   0   0
-General1-Slot6   Worked Dragonhide Gauntlets   27110   1   6
-General1-Slot6-Slot1   Empty   0   0   0
-General1-Slot6-Slot2   Empty   0   0   0
-General1-Slot7   Wrapped Entropy Serpent Spine   26035   1   6
-General1-Slot7-Slot1   Empty   0   0   0
-General1-Slot7-Slot2   Empty   0   0   0
-General1-Slot8   Empty   0   0   0
-General2   Backpack   17005   1   8
-General2-Slot1   Dragon Meat   22807   1   6
-General2-Slot2   Palladium Axe   5624   1   6
-General2-Slot2-Slot1   Empty   0   0   0
-General2-Slot2-Slot2   Empty   0   0   0
-General2-Slot3   Blight, Hammer of the Scourge   11628   1   6
-General2-Slot3-Slot1   Empty   0   0   0
-General2-Slot3-Slot2   Empty   0   0   0
-General2-Slot4   Withered Totem of Widdershins   11665   1   6
-General2-Slot4-Slot1   Empty   0   0   0
-General2-Slot4-Slot2   Empty   0   0   0
-General2-Slot5   Decree of Quellious   20804   1   6
-General2-Slot6   Withered Totem of Widdershins   11665   1   6
-General2-Slot6-Slot1   Empty   0   0   0
-General2-Slot6-Slot2   Empty   0   0   0
-General2-Slot7   Crystalline Spear   11610   1   6
-General2-Slot7-Slot1   Empty   0   0   0
-General2-Slot7-Slot2   Empty   0   0   0
-General2-Slot8   Mithril Vambraces   4411   1   6
-General2-Slot8-Slot1   Empty   0   0   0
-General2-Slot8-Slot2   Empty   0   0   0
-General3   Backpack   17005   1   8
-General3-Slot1   Bone Razor   11661   1   6
-General3-Slot1-Slot1   Empty   0   0   0
-General3-Slot1-Slot2   Empty   0   0   0
-General3-Slot2   Flayed Turmoilskin Belt   2502   1   6
-General3-Slot2-Slot1   Empty   0   0   0
-General3-Slot3   Diamond Encrusted Staff   6674   1   6
-General3-Slot3-Slot1   Empty   0   0   0
-General3-Slot3-Slot2   Empty   0   0   0
-General3-Slot4   Peacebringer   6646   1   6
-General3-Slot4-Slot1   Empty   0   0   0
-General3-Slot4-Slot2   Empty   0   0   0
-General3-Slot5   Crystalline Spear   11610   1   6
-General3-Slot5-Slot1   Empty   0   0   0
-General3-Slot5-Slot2   Empty   0   0   0
-General3-Slot6   Warhammer of Divine Grace   11611   1   6
-General3-Slot6-Slot1   Empty   0   0   0
-General3-Slot6-Slot2   Empty   0   0   0
-General3-Slot7   Gauntlets of Mortality   26026   1   6
-General3-Slot7-Slot1   Empty   0   0   0
-General3-Slot7-Slot2   Empty   0   0   0
-General3-Slot8   Empty   0   0   0
-General4   Backpack   17005   1   8
-General4-Slot1   Bladestopper   11632   1   6
-General4-Slot1-Slot1   Empty   0   0   0
-General4-Slot1-Slot2   Empty   0   0   0
-General4-Slot2   Hardened Clay Bracelet   3212   1   6
-General4-Slot2-Slot1   Empty   0   0   0
-General4-Slot2-Slot2   Empty   0   0   0
-General4-Slot3   Water Dragon Scales   11583   1   6
-General4-Slot4   Waters of Impenetrable Aura   6678   1   6
-General4-Slot4-Slot1   Empty   0   0   0
-General4-Slot4-Slot2   Empty   0   0   0
-General4-Slot5   Crystalline Spear   11610   1   6
-General4-Slot5-Slot1   Empty   0   0   0
-General4-Slot5-Slot2   Empty   0   0   0
-General4-Slot6   Crystalline Spear   11610   1   6
-General4-Slot6-Slot1   Empty   0   0   0
-General4-Slot6-Slot2   Empty   0   0   0
-General4-Slot7   Shissar Nullifier Staff   6676   1   6
-General4-Slot7-Slot1   Empty   0   0   0
-General4-Slot7-Slot2   Empty   0   0   0
-General4-Slot8   Empty   0   0   0
-General5   Backpack   17005   1   8
-General5-Slot1   Ravenscale Neckguard   3163   1   6
-General5-Slot1-Slot1   Empty   0   0   0
-General5-Slot2   Serpent's Tooth   7257   1   6
-General5-Slot2-Slot1   Empty   0   0   0
-General5-Slot2-Slot2   Empty   0   0   0
-General5-Slot3   Sebilite Scale Mantle   3204   1   6
-General5-Slot3-Slot1   Empty   0   0   0
-General5-Slot4   Empty   0   0   0
-General5-Slot5   Sebilite Croaking Dirk   7222   1   6
-General5-Slot5-Slot1   Empty   0   0   0
-General5-Slot5-Slot2   Empty   0   0   0
-General5-Slot6   Crystalline Spear   11610   1   6
-General5-Slot6-Slot1   Empty   0   0   0
-General5-Slot6-Slot2   Empty   0   0   0
-General5-Slot7   Empty   0   0   0
-General5-Slot8   Empty   0   0   0
-General6   Backpack   17005   1   8
-General6-Slot1   Shissar Guardian Staff   6677   1   6
-General6-Slot1-Slot1   Empty   0   0   0
-General6-Slot1-Slot2   Empty   0   0   0
-General6-Slot2   Executioners Hood   2468   1   6
-General6-Slot2-Slot1   Empty   0   0   0
-General6-Slot2-Slot2   Empty   0   0   0
-General6-Slot3   Wand of Lava   12503   1   6
-General6-Slot3-Slot1   Empty   0   0   0
-General6-Slot4   Empty   0   0   0
-General6-Slot5   Empty   0   0   0
-General6-Slot6   Cobalt Helm   4515   1   6
-General6-Slot6-Slot1   Empty   0   0   0
-General6-Slot6-Slot2   Empty   0   0   0
-General6-Slot7   Mrylokar's Helm   4550   1   6
-General6-Slot7-Slot1   Empty   0   0   0
-General6-Slot7-Slot2   Empty   0   0   0
-General6-Slot8   Blood Ember Helm   4522   1   6
-General6-Slot8-Slot1   Empty   0   0   0
-General6-Slot8-Slot2   Empty   0   0   0
-General7   Backpack   17005   1   8
-General7-Slot1   Iron Ration   13005   1   6
-General7-Slot2   Staff of the Earthcrafter   11649   1   6
-General7-Slot2-Slot1   Empty   0   0   0
-General7-Slot2-Slot2   Empty   0   0   0
-General7-Slot3   White Wolf-hide Cloak   2346   1   6
-General7-Slot3-Slot1   Empty   0   0   0
-General7-Slot4   Jacinth   10053   4   6
-General7-Slot5   Eye of Innoruuk   20656   1   6
-General7-Slot5-Slot1   Empty   0   0   0
-General7-Slot6   Empty   0   0   0
-General7-Slot7   Empty   0   0   0
-General7-Slot8   Empty   0   0   0
-General8   Black Blade of Tormenting   25091   1   6
-General8-Slot1   Empty   0   0   0
-General8-Slot2   Empty   0   0   0
-General9   Empty   0   0   0
-General10   Empty   0   0   0
-Held   Empty   0   0   0
-Bank1   Backpack*   32601   1   8
-Bank1-Slot1   White Dragon Scales   11602   1   6
-Bank1-Slot2   White Dragon Scales   11602   1   6
-Bank1-Slot3   White Dragon Scales   11602   1   6
-Bank1-Slot4   White Dragon Scales   11602   1   6
-Bank1-Slot5   White Dragon Scales   11602   1   6
-Bank1-Slot6   White Dragon Scales   11602   1   6
-Bank1-Slot7   White Dragon Scales   11602   1   6
-Bank1-Slot8   Empty   0   0   0
-Bank2   Backpack   17005   1   8
-Bank2-Slot1   Empty   0   0   0
-Bank2-Slot2   Empty   0   0   0
-Bank2-Slot3   Platinum Jacinth Wedding Ring   14699   1   6
-Bank2-Slot3-Slot1   Empty   0   0   0
-Bank2-Slot4   Platinum Jacinth Wedding Ring   14699   1   6
-Bank2-Slot4-Slot1   Empty   0   0   0
-Bank2-Slot5   Platinum Jacinth Wedding Ring   14699   1   6
-Bank2-Slot5-Slot1   Empty   0   0   0
-Bank2-Slot6   Platinum Jacinth Wedding Ring   14699   1   6
-Bank2-Slot6-Slot1   Empty   0   0   0
-Bank2-Slot7   Platinum Jacinth Wedding Ring   14699   1   6
-Bank2-Slot7-Slot1   Empty   0   0   0
-Bank2-Slot8   Platinum Jacinth Wedding Ring   14699   1   6
-Bank2-Slot8-Slot1   Empty   0   0   0
-Bank3   Backpack   17005   1   8
-Bank3-Slot1   Green Dragon Scales   11582   1   6
-Bank3-Slot2   Green Dragon Scales   11582   1   6
-Bank3-Slot3   Green Dragon Scales   11582   1   6
-Bank3-Slot4   Green Dragon Scales   11582   1   6
-Bank3-Slot5   Green Dragon Scales   11582   1   6
-Bank3-Slot6   Green Dragon Scales   11582   1   6
-Bank3-Slot7   Water Dragon Scales   11583   1   6
-Bank3-Slot8   Water Dragon Scales   11583   1   6
-Bank4   Backpack   17005   1   8
-Bank4-Slot1   Prayers of Life   11631   1   6
-Bank4-Slot2   Prayers of Life   11631   1   6
-Bank4-Slot3   Prayers of Life   11631   1   6
-Bank4-Slot4   Spell: Call of the Hero   19360   1   6
-Bank4-Slot5   Spell: Trepidation   19220   1   6
-Bank4-Slot6   Spell: Greater Vocaration: Water   19372   1   6
-Bank4-Slot7   Spell: Gift of Pure Thought   19401   1   6
-Bank4-Slot8   Wurm Scale   11934   1   6
-Bank5   Backpack   17005   1   8
-Bank5-Slot1   Water Dragon Scales   11583   1   6
-Bank5-Slot2   Water Dragon Scales   11583   1   6
-Bank5-Slot3   Water Dragon Scales   11583   1   6
-Bank5-Slot4   Water Dragon Scales   11583   1   6
-Bank5-Slot5   Water Dragon Scales   11583   1   6
-Bank5-Slot6   Water Dragon Scales   11583   1   6
-Bank5-Slot7   Water Dragon Scales   11583   1   6
-Bank5-Slot8   Water Dragon Scales   11583   1   6
-Bank6   Backpack   17005   1   8
-Bank6-Slot1   Black Sapphire Electrum Earring   14701   1   6
-Bank6-Slot1-Slot1   Empty   0   0   0
-Bank6-Slot2   Black Sapphire Electrum Earring   14701   1   6
-Bank6-Slot2-Slot1   Empty   0   0   0
-Bank6-Slot3   Black Sapphire Electrum Earring   14701   1   6
-Bank6-Slot3-Slot1   Empty   0   0   0
-Bank6-Slot4   Black Sapphire Electrum Earring   14701   1   6
-Bank6-Slot4-Slot1   Empty   0   0   0
-Bank6-Slot5   Black Sapphire Electrum Earring   14701   1   6
-Bank6-Slot5-Slot1   Empty   0   0   0
-Bank6-Slot6   Black Sapphire Electrum Earring   14701   1   6
-Bank6-Slot6-Slot1   Empty   0   0   0
-Bank6-Slot7   Empty   0   0   0
-Bank6-Slot8   Empty   0   0   0
-Bank7   Puppet Strings   11643   1   6
-Bank8   Empty   0   0   0
-Bank9   Backpack   17005   1   8
-Bank9-Slot1   Orb of Tishan   11625   1   6
-Bank9-Slot1-Slot1   Empty   0   0   0
-Bank9-Slot1-Slot2   Empty   0   0   0
-Bank9-Slot2   Orb of Tishan   11625   1   6
-Bank9-Slot2-Slot1   Empty   0   0   0
-Bank9-Slot2-Slot2   Empty   0   0   0
-Bank9-Slot3   Blight, Hammer of the Scourge   11628   1   6
-Bank9-Slot3-Slot1   Empty   0   0   0
-Bank9-Slot3-Slot2   Empty   0   0   0
-Bank9-Slot4   Empty   0   0   0
-Bank9-Slot5   Empty   0   0   0
-Bank9-Slot6   Empty   0   0   0
-Bank9-Slot7   Crown of Elemental Mastery   20764   1   6
-Bank9-Slot7-Slot1   Empty   0   0   0
-Bank9-Slot7-Slot2   Empty   0   0   0
-Bank9-Slot8   Empty   0   0   0
-Bank10   Backpack   17005   1   8
-Bank10-Slot1   Golden Diamond Mask   14706   1   6
-Bank10-Slot1-Slot1   Empty   0   0   0
-Bank10-Slot2   Golden Diamond Mask   14706   1   6
-Bank10-Slot2-Slot1   Empty   0   0   0
-Bank10-Slot3   Empty   0   0   0
-Bank10-Slot4   Empty   0   0   0
-Bank10-Slot5   Empty   0   0   0
-Bank10-Slot6   Empty   0   0   0
-Bank10-Slot7   Empty   0   0   0
-Bank10-Slot8   Empty   0   0   0
-Bank11   Backpack   17005   1   8
-Bank11-Slot1   Orb of Tishan   11625   1   6
-Bank11-Slot1-Slot1   Empty   0   0   0
-Bank11-Slot1-Slot2   Empty   0   0   0
-Bank11-Slot2   Orb of Tishan   11625   1   6
-Bank11-Slot2-Slot1   Empty   0   0   0
-Bank11-Slot2-Slot2   Empty   0   0   0
-Bank11-Slot3   Orb of Tishan   11625   1   6
-Bank11-Slot3-Slot1   Empty   0   0   0
-Bank11-Slot3-Slot2   Empty   0   0   0
-Bank11-Slot4   Orb of Tishan   11625   1   6
-Bank11-Slot4-Slot1   Empty   0   0   0
-Bank11-Slot4-Slot2   Empty   0   0   0
-Bank11-Slot5   Orb of Tishan   11625   1   6
-Bank11-Slot5-Slot1   Empty   0   0   0
-Bank11-Slot5-Slot2   Empty   0   0   0
-Bank11-Slot6   Orb of Tishan   11625   1   6
-Bank11-Slot6-Slot1   Empty   0   0   0
-Bank11-Slot6-Slot2   Empty   0   0   0
-Bank11-Slot7   Orb of Tishan   11625   1   6
-Bank11-Slot7-Slot1   Empty   0   0   0
-Bank11-Slot7-Slot2   Empty   0   0   0
-Bank11-Slot8   Orb of Tishan   11625   1   6
-Bank11-Slot8-Slot1   Empty   0   0   0
-Bank11-Slot8-Slot2   Empty   0   0   0
-Bank12   Backpack   17005   1   8
-Bank12-Slot1   Warhammer of Divine Grace   11611   1   6
-Bank12-Slot1-Slot1   Empty   0   0   0
-Bank12-Slot1-Slot2   Empty   0   0   0
-Bank12-Slot2   Gold Plated Koshigatana   11630   1   6
-Bank12-Slot2-Slot1   Empty   0   0   0
-Bank12-Slot2-Slot2   Empty   0   0   0
-Bank12-Slot3   Warhammer of Divine Grace   11611   1   6
-Bank12-Slot3-Slot1   Empty   0   0   0
-Bank12-Slot3-Slot2   Empty   0   0   0
-Bank12-Slot4   Gold Plated Koshigatana   11630   1   6
-Bank12-Slot4-Slot1   Empty   0   0   0
-Bank12-Slot4-Slot2   Empty   0   0   0
-Bank12-Slot5   Warhammer of Divine Grace   11611   1   6
-Bank12-Slot5-Slot1   Empty   0   0   0
-Bank12-Slot5-Slot2   Empty   0   0   0
-Bank12-Slot6   Staff of the Earthcrafter   11649   1   6
-Bank12-Slot6-Slot1   Empty   0   0   0
-Bank12-Slot6-Slot2   Empty   0   0   0
-Bank12-Slot7   Warhammer of Divine Grace   11611   1   6
-Bank12-Slot7-Slot1   Empty   0   0   0
-Bank12-Slot7-Slot2   Empty   0   0   0
-Bank12-Slot8   Hierophant`s Crook   11629   1   6
-Bank12-Slot8-Slot1   Empty   0   0   0
-Bank12-Slot8-Slot2   Empty   0   0   0
-Bank13   Backpack   17005   1   8
-Bank13-Slot1   Empty   0   0   0
-Bank13-Slot2   Platinum Blue Diamond Tiara   30367   1   6
-Bank13-Slot2-Slot1   Empty   0   0   0
-Bank13-Slot2-Slot2   Empty   0   0   0
-Bank13-Slot3   Platinum Blue Diamond Tiara   30367   1   6
-Bank13-Slot3-Slot1   Empty   0   0   0
-Bank13-Slot3-Slot2   Empty   0   0   0
-Bank13-Slot4   Platinum Blue Diamond Tiara   30367   1   6
-Bank13-Slot4-Slot1   Empty   0   0   0
-Bank13-Slot4-Slot2   Empty   0   0   0
-Bank13-Slot5   Empty   0   0   0
-Bank13-Slot6   Empty   0   0   0
-Bank13-Slot7   Empty   0   0   0
-Bank13-Slot8   Empty   0   0   0
-Bank14   Backpack   17005   1   8
-Bank14-Slot1   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot1-Slot1   Empty   0   0   0
-Bank14-Slot1-Slot2   Empty   0   0   0
-Bank14-Slot2   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot2-Slot1   Empty   0   0   0
-Bank14-Slot2-Slot2   Empty   0   0   0
-Bank14-Slot3   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot3-Slot1   Empty   0   0   0
-Bank14-Slot3-Slot2   Empty   0   0   0
-Bank14-Slot4   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot4-Slot1   Empty   0   0   0
-Bank14-Slot4-Slot2   Empty   0   0   0
-Bank14-Slot5   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot5-Slot1   Empty   0   0   0
-Bank14-Slot5-Slot2   Empty   0   0   0
-Bank14-Slot6   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot6-Slot1   Empty   0   0   0
-Bank14-Slot6-Slot2   Empty   0   0   0
-Bank14-Slot7   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot7-Slot1   Empty   0   0   0
-Bank14-Slot7-Slot2   Empty   0   0   0
-Bank14-Slot8   Blight, Hammer of the Scourge   11628   1   6
-Bank14-Slot8-Slot1   Empty   0   0   0
-Bank14-Slot8-Slot2   Empty   0   0   0
-Bank15   Backpack   17005   1   8
-Bank15-Slot1   Barbarian Spiritist`s Hammer   11647   1   6
-Bank15-Slot1-Slot1   Empty   0   0   0
-Bank15-Slot1-Slot2   Empty   0   0   0
-Bank15-Slot2   Gold Plated Koshigatana   11630   1   6
-Bank15-Slot2-Slot1   Empty   0   0   0
-Bank15-Slot2-Slot2   Empty   0   0   0
-Bank15-Slot3   Blight, Hammer of the Scourge   11628   1   6
-Bank15-Slot3-Slot1   Empty   0   0   0
-Bank15-Slot3-Slot2   Empty   0   0   0
-Bank15-Slot4   Gold Plated Koshigatana   11630   1   6
-Bank15-Slot4-Slot1   Empty   0   0   0
-Bank15-Slot4-Slot2   Empty   0   0   0
-Bank15-Slot5   Barbarian Spiritist`s Hammer   11647   1   6
-Bank15-Slot5-Slot1   Empty   0   0   0
-Bank15-Slot5-Slot2   Empty   0   0   0
-Bank15-Slot6   Gold Plated Koshigatana   11630   1   6
-Bank15-Slot6-Slot1   Empty   0   0   0
-Bank15-Slot6-Slot2   Empty   0   0   0
-Bank15-Slot7   Blight, Hammer of the Scourge   11628   1   6
-Bank15-Slot7-Slot1   Empty   0   0   0
-Bank15-Slot7-Slot2   Empty   0   0   0
-Bank15-Slot8   Empty   0   0   0
-Bank16   Earthshaker   5667   1   6
-Bank16-Slot1   Empty   0   0   0
-Bank16-Slot2   Empty   0   0   0
-Bank17   Empty   0   0   0
-Bank18   Empty   0   0   0
-Bank19   Empty   0   0   0
-Bank20   Empty   0   0   0
-Bank21   Empty   0   0   0
-Bank22   Empty   0   0   0
-Bank23   Empty   0   0   0
-Bank24   Empty   0   0   0
-SharedBank1   Backpack   17005   1   8
-SharedBank1-Slot1   Empty   0   0   0
-SharedBank1-Slot2   Empty   0   0   0
-SharedBank1-Slot3   Empty   0   0   0
-SharedBank1-Slot4   Empty   0   0   0
-SharedBank1-Slot5   Empty   0   0   0
-SharedBank1-Slot6   Empty   0   0   0
-SharedBank1-Slot7   Dragon Bone Bracelet   11606   1   6
-SharedBank1-Slot7-Slot1   Empty   0   0   0
-SharedBank1-Slot7-Slot2   Empty   0   0   0
-SharedBank1-Slot8   Dragon Bone Bracelet   11606   1   6
-SharedBank1-Slot8-Slot1   Empty   0   0   0
-SharedBank1-Slot8-Slot2   Empty   0   0   0
-SharedBank2   Backpack   17005   1   8
-SharedBank2-Slot1   Crystalline Spear   11610   1   6
-SharedBank2-Slot1-Slot1   Empty   0   0   0
-SharedBank2-Slot1-Slot2   Empty   0   0   0
-SharedBank2-Slot2   Crystalline Spear   11610   1   6
-SharedBank2-Slot2-Slot1   Empty   0   0   0
-SharedBank2-Slot2-Slot2   Empty   0   0   0
-SharedBank2-Slot3   Crystalline Spear   11610   1   6
-SharedBank2-Slot3-Slot1   Empty   0   0   0
-SharedBank2-Slot3-Slot2   Empty   0   0   0
-SharedBank2-Slot4   Crystalline Spear   11610   1   6
-SharedBank2-Slot4-Slot1   Empty   0   0   0
-SharedBank2-Slot4-Slot2   Empty   0   0   0
-SharedBank2-Slot5   Empty   0   0   0
-SharedBank2-Slot6   Empty   0   0   0
-SharedBank2-Slot7   Empty   0   0   0
-SharedBank2-Slot8   Empty   0   0   0
-SharedBank3   Empty   0   0   0
-SharedBank4   Empty   0   0   0
+Location	Name	ID	Count	 Slots
+Charm	 Empty	0	 0	0
+Ear	 Empty	0	 0	0
+Head	Skull-shaped Barbute	4301	1	 6
+Head-Slot1	Empty	 0	0	 0
+Head-Slot2	Empty	 0	0	 0
+Face	Worked Dragonskin Mask	27114	 1	6
+Face-Slot1	Empty	 0	0	 0
+Ear	 Empty	0	 0	0
+Neck	Empty	 0	0	 0
+Shoulders	 Empty	0	 0	0
+Arms	Mithril Vambraces	 4411	 1	6
+Arms-Slot1	Empty	 0	0	 0
+Arms-Slot2	Empty	 0	0	 0
+Back	Empty	 0	0	 0
+Wrist	 Empty	0	 0	0
+Wrist	 Empty	0	 0	0
+Range	 Gloomingdeep Lantern	 9979	 1	6
+Range-Slot1	 Empty	0	 0	0
+Hands	 Empty	0	 0	0
+Primary	 Empty	0	 0	0
+Secondary	 Empty	0	 0	0
+Fingers	 Empty	0	 0	0
+Fingers	 Empty	0	 0	0
+Chest	 Empty	0	 0	0
+Legs	Empty	 0	0	 0
+Feet	Empty	 0	0	 0
+Waist	 Empty	0	 0	0
+Power Source	Empty	 0	0	 0
+Ammo	Empty	 0	0	 0
+General1	Backpack*	 32601	1	 8
+General1-Slot1	Heavy Dragonleg Breeches	27130	 1	6
+General1-Slot1-Slot1	Empty	 0	0	 0
+General1-Slot1-Slot2	Empty	 0	0	 0
+General1-Slot2	Heavy Dragonskin Mask	 27136	1	 6
+General1-Slot2-Slot1	Empty	 0	0	 0
+General1-Slot3	Light Velium Warsword	 27003	1	 6
+General1-Slot3-Slot1	Empty	 0	0	 0
+General1-Slot3-Slot2	Empty	 0	0	 0
+General1-Slot4	Reinforced Dragonspine Vambraces	27123	 1	6
+General1-Slot4-Slot1	Empty	 0	0	 0
+General1-Slot4-Slot2	Empty	 0	0	 0
+General1-Slot5	Silver Etched Warhammer	 6653	 1	6
+General1-Slot5-Slot1	Empty	 0	0	 0
+General1-Slot5-Slot2	Empty	 0	0	 0
+General1-Slot6	Worked Dragonhide Gauntlets	 27110	1	 6
+General1-Slot6-Slot1	Empty	 0	0	 0
+General1-Slot6-Slot2	Empty	 0	0	 0
+General1-Slot7	Wrapped Entropy Serpent Spine	 26035	1	 6
+General1-Slot7-Slot1	Empty	 0	0	 0
+General1-Slot7-Slot2	Empty	 0	0	 0
+General1-Slot8	Empty	 0	0	 0
+General2	Backpack	17005	 1	8
+General2-Slot1	Dragon Meat	 22807	1	 6
+General2-Slot2	Palladium Axe	 5624	 1	6
+General2-Slot2-Slot1	Empty	 0	0	 0
+General2-Slot2-Slot2	Empty	 0	0	 0
+General2-Slot3	Blight, Hammer of the Scourge	 11628	1	 6
+General2-Slot3-Slot1	Empty	 0	0	 0
+General2-Slot3-Slot2	Empty	 0	0	 0
+General2-Slot4	Withered Totem of Widdershins	 11665	1	 6
+General2-Slot4-Slot1	Empty	 0	0	 0
+General2-Slot4-Slot2	Empty	 0	0	 0
+General2-Slot5	Decree of Quellious	 20804	1	 6
+General2-Slot6	Withered Totem of Widdershins	 11665	1	 6
+General2-Slot6-Slot1	Empty	 0	0	 0
+General2-Slot6-Slot2	Empty	 0	0	 0
+General2-Slot7	Crystalline Spear	 11610	1	 6
+General2-Slot7-Slot1	Empty	 0	0	 0
+General2-Slot7-Slot2	Empty	 0	0	 0
+General2-Slot8	Mithril Vambraces	 4411	 1	6
+General2-Slot8-Slot1	Empty	 0	0	 0
+General2-Slot8-Slot2	Empty	 0	0	 0
+General3	Backpack	17005	 1	8
+General3-Slot1	Bone Razor	11661	 1	6
+General3-Slot1-Slot1	Empty	 0	0	 0
+General3-Slot1-Slot2	Empty	 0	0	 0
+General3-Slot2	Flayed Turmoilskin Belt	 2502	 1	6
+General3-Slot2-Slot1	Empty	 0	0	 0
+General3-Slot3	Diamond Encrusted Staff	 6674	 1	6
+General3-Slot3-Slot1	Empty	 0	0	 0
+General3-Slot3-Slot2	Empty	 0	0	 0
+General3-Slot4	Peacebringer	6646	1	 6
+General3-Slot4-Slot1	Empty	 0	0	 0
+General3-Slot4-Slot2	Empty	 0	0	 0
+General3-Slot5	Crystalline Spear	 11610	1	 6
+General3-Slot5-Slot1	Empty	 0	0	 0
+General3-Slot5-Slot2	Empty	 0	0	 0
+General3-Slot6	Warhammer of Divine Grace	 11611	1	 6
+General3-Slot6-Slot1	Empty	 0	0	 0
+General3-Slot6-Slot2	Empty	 0	0	 0
+General3-Slot7	Gauntlets of Mortality	26026	 1	6
+General3-Slot7-Slot1	Empty	 0	0	 0
+General3-Slot7-Slot2	Empty	 0	0	 0
+General3-Slot8	Empty	 0	0	 0
+General4	Backpack	17005	 1	8
+General4-Slot1	Bladestopper	11632	 1	6
+General4-Slot1-Slot1	Empty	 0	0	 0
+General4-Slot1-Slot2	Empty	 0	0	 0
+General4-Slot2	Hardened Clay Bracelet	3212	1	 6
+General4-Slot2-Slot1	Empty	 0	0	 0
+General4-Slot2-Slot2	Empty	 0	0	 0
+General4-Slot3	Water Dragon Scales	 11583	1	 6
+General4-Slot4	Waters of Impenetrable Aura	 6678	 1	6
+General4-Slot4-Slot1	Empty	 0	0	 0
+General4-Slot4-Slot2	Empty	 0	0	 0
+General4-Slot5	Crystalline Spear	 11610	1	 6
+General4-Slot5-Slot1	Empty	 0	0	 0
+General4-Slot5-Slot2	Empty	 0	0	 0
+General4-Slot6	Crystalline Spear	 11610	1	 6
+General4-Slot6-Slot1	Empty	 0	0	 0
+General4-Slot6-Slot2	Empty	 0	0	 0
+General4-Slot7	Shissar Nullifier Staff	 6676	 1	6
+General4-Slot7-Slot1	Empty	 0	0	 0
+General4-Slot7-Slot2	Empty	 0	0	 0
+General4-Slot8	Empty	 0	0	 0
+General5	Backpack	17005	 1	8
+General5-Slot1	Ravenscale Neckguard	3163	1	 6
+General5-Slot1-Slot1	Empty	 0	0	 0
+General5-Slot2	Serpent's Tooth	 7257	 1	6
+General5-Slot2-Slot1	Empty	 0	0	 0
+General5-Slot2-Slot2	Empty	 0	0	 0
+General5-Slot3	Sebilite Scale Mantle	 3204	 1	6
+General5-Slot3-Slot1	Empty	 0	0	 0
+General5-Slot4	Empty	 0	0	 0
+General5-Slot5	Sebilite Croaking Dirk	7222	1	 6
+General5-Slot5-Slot1	Empty	 0	0	 0
+General5-Slot5-Slot2	Empty	 0	0	 0
+General5-Slot6	Crystalline Spear	 11610	1	 6
+General5-Slot6-Slot1	Empty	 0	0	 0
+General5-Slot6-Slot2	Empty	 0	0	 0
+General5-Slot7	Empty	 0	0	 0
+General5-Slot8	Empty	 0	0	 0
+General6	Backpack	17005	 1	8
+General6-Slot1	Shissar Guardian Staff	6677	1	 6
+General6-Slot1-Slot1	Empty	 0	0	 0
+General6-Slot1-Slot2	Empty	 0	0	 0
+General6-Slot2	Executioners Hood	 2468	 1	6
+General6-Slot2-Slot1	Empty	 0	0	 0
+General6-Slot2-Slot2	Empty	 0	0	 0
+General6-Slot3	Wand of Lava	12503	 1	6
+General6-Slot3-Slot1	Empty	 0	0	 0
+General6-Slot4	Empty	 0	0	 0
+General6-Slot5	Empty	 0	0	 0
+General6-Slot6	Cobalt Helm	 4515	 1	6
+General6-Slot6-Slot1	Empty	 0	0	 0
+General6-Slot6-Slot2	Empty	 0	0	 0
+General6-Slot7	Mrylokar's Helm	 4550	 1	6
+General6-Slot7-Slot1	Empty	 0	0	 0
+General6-Slot7-Slot2	Empty	 0	0	 0
+General6-Slot8	Blood Ember Helm	4522	1	 6
+General6-Slot8-Slot1	Empty	 0	0	 0
+General6-Slot8-Slot2	Empty	 0	0	 0
+General7	Backpack	17005	 1	8
+General7-Slot1	Iron Ration	 13005	1	 6
+General7-Slot2	Staff of the Earthcrafter	 11649	1	 6
+General7-Slot2-Slot1	Empty	 0	0	 0
+General7-Slot2-Slot2	Empty	 0	0	 0
+General7-Slot3	White Wolf-hide Cloak	 2346	 1	6
+General7-Slot3-Slot1	Empty	 0	0	 0
+General7-Slot4	Jacinth	 10053	4	 6
+General7-Slot5	Eye of Innoruuk	 20656	1	 6
+General7-Slot5-Slot1	Empty	 0	0	 0
+General7-Slot6	Empty	 0	0	 0
+General7-Slot7	Empty	 0	0	 0
+General7-Slot8	Empty	 0	0	 0
+General8	Black Blade of Tormenting	 25091	1	 6
+General8-Slot1	Empty	 0	0	 0
+General8-Slot2	Empty	 0	0	 0
+General9	Empty	 0	0	 0
+General10	 Empty	0	 0	0
+Held	Empty	 0	0	 0
+Bank1	 Backpack*	32601	 1	8
+Bank1-Slot1	 White Dragon Scales	11602	 1	6
+Bank1-Slot2	 White Dragon Scales	11602	 1	6
+Bank1-Slot3	 White Dragon Scales	11602	 1	6
+Bank1-Slot4	 White Dragon Scales	11602	 1	6
+Bank1-Slot5	 White Dragon Scales	11602	 1	6
+Bank1-Slot6	 White Dragon Scales	11602	 1	6
+Bank1-Slot7	 White Dragon Scales	11602	 1	6
+Bank1-Slot8	 Empty	0	 0	0
+Bank2	 Backpack	 17005	1	 8
+Bank2-Slot1	 Empty	0	 0	0
+Bank2-Slot2	 Empty	0	 0	0
+Bank2-Slot3	 Platinum Jacinth Wedding Ring	14699	 1	6
+Bank2-Slot3-Slot1	 Empty	0	 0	0
+Bank2-Slot4	 Platinum Jacinth Wedding Ring	14699	 1	6
+Bank2-Slot4-Slot1	 Empty	0	 0	0
+Bank2-Slot5	 Platinum Jacinth Wedding Ring	14699	 1	6
+Bank2-Slot5-Slot1	 Empty	0	 0	0
+Bank2-Slot6	 Platinum Jacinth Wedding Ring	14699	 1	6
+Bank2-Slot6-Slot1	 Empty	0	 0	0
+Bank2-Slot7	 Platinum Jacinth Wedding Ring	14699	 1	6
+Bank2-Slot7-Slot1	 Empty	0	 0	0
+Bank2-Slot8	 Platinum Jacinth Wedding Ring	14699	 1	6
+Bank2-Slot8-Slot1	 Empty	0	 0	0
+Bank3	 Backpack	 17005	1	 8
+Bank3-Slot1	 Green Dragon Scales	11582	 1	6
+Bank3-Slot2	 Green Dragon Scales	11582	 1	6
+Bank3-Slot3	 Green Dragon Scales	11582	 1	6
+Bank3-Slot4	 Green Dragon Scales	11582	 1	6
+Bank3-Slot5	 Green Dragon Scales	11582	 1	6
+Bank3-Slot6	 Green Dragon Scales	11582	 1	6
+Bank3-Slot7	 Water Dragon Scales	11583	 1	6
+Bank3-Slot8	 Water Dragon Scales	11583	 1	6
+Bank4	 Backpack	 17005	1	 8
+Bank4-Slot1	 Prayers of Life	11631	 1	6
+Bank4-Slot2	 Prayers of Life	11631	 1	6
+Bank4-Slot3	 Prayers of Life	11631	 1	6
+Bank4-Slot4	 Spell: Call of the Hero	19360	 1	6
+Bank4-Slot5	 Spell: Trepidation	 19220	1	 6
+Bank4-Slot6	 Spell: Greater Vocaration: Water	 19372	1	 6
+Bank4-Slot7	 Spell: Gift of Pure Thought	19401	 1	6
+Bank4-Slot8	 Wurm Scale	 11934	1	 6
+Bank5	 Backpack	 17005	1	 8
+Bank5-Slot1	 Water Dragon Scales	11583	 1	6
+Bank5-Slot2	 Water Dragon Scales	11583	 1	6
+Bank5-Slot3	 Water Dragon Scales	11583	 1	6
+Bank5-Slot4	 Water Dragon Scales	11583	 1	6
+Bank5-Slot5	 Water Dragon Scales	11583	 1	6
+Bank5-Slot6	 Water Dragon Scales	11583	 1	6
+Bank5-Slot7	 Water Dragon Scales	11583	 1	6
+Bank5-Slot8	 Water Dragon Scales	11583	 1	6
+Bank6	 Backpack	 17005	1	 8
+Bank6-Slot1	 Black Sapphire Electrum Earring	14701	 1	6
+Bank6-Slot1-Slot1	 Empty	0	 0	0
+Bank6-Slot2	 Black Sapphire Electrum Earring	14701	 1	6
+Bank6-Slot2-Slot1	 Empty	0	 0	0
+Bank6-Slot3	 Black Sapphire Electrum Earring	14701	 1	6
+Bank6-Slot3-Slot1	 Empty	0	 0	0
+Bank6-Slot4	 Black Sapphire Electrum Earring	14701	 1	6
+Bank6-Slot4-Slot1	 Empty	0	 0	0
+Bank6-Slot5	 Black Sapphire Electrum Earring	14701	 1	6
+Bank6-Slot5-Slot1	 Empty	0	 0	0
+Bank6-Slot6	 Black Sapphire Electrum Earring	14701	 1	6
+Bank6-Slot6-Slot1	 Empty	0	 0	0
+Bank6-Slot7	 Empty	0	 0	0
+Bank6-Slot8	 Empty	0	 0	0
+Bank7	 Puppet Strings	 11643	1	 6
+Bank8	 Empty	0	 0	0
+Bank9	 Backpack	 17005	1	 8
+Bank9-Slot1	 Orb of Tishan	11625	 1	6
+Bank9-Slot1-Slot1	 Empty	0	 0	0
+Bank9-Slot1-Slot2	 Empty	0	 0	0
+Bank9-Slot2	 Orb of Tishan	11625	 1	6
+Bank9-Slot2-Slot1	 Empty	0	 0	0
+Bank9-Slot2-Slot2	 Empty	0	 0	0
+Bank9-Slot3	 Blight, Hammer of the Scourge	11628	 1	6
+Bank9-Slot3-Slot1	 Empty	0	 0	0
+Bank9-Slot3-Slot2	 Empty	0	 0	0
+Bank9-Slot4	 Empty	0	 0	0
+Bank9-Slot5	 Empty	0	 0	0
+Bank9-Slot6	 Empty	0	 0	0
+Bank9-Slot7	 Crown of Elemental Mastery	 20764	1	 6
+Bank9-Slot7-Slot1	 Empty	0	 0	0
+Bank9-Slot7-Slot2	 Empty	0	 0	0
+Bank9-Slot8	 Empty	0	 0	0
+Bank10	Backpack	17005	 1	8
+Bank10-Slot1	Golden Diamond Mask	 14706	1	 6
+Bank10-Slot1-Slot1	Empty	 0	0	 0
+Bank10-Slot2	Golden Diamond Mask	 14706	1	 6
+Bank10-Slot2-Slot1	Empty	 0	0	 0
+Bank10-Slot3	Empty	 0	0	 0
+Bank10-Slot4	Empty	 0	0	 0
+Bank10-Slot5	Empty	 0	0	 0
+Bank10-Slot6	Empty	 0	0	 0
+Bank10-Slot7	Empty	 0	0	 0
+Bank10-Slot8	Empty	 0	0	 0
+Bank11	Backpack	17005	 1	8
+Bank11-Slot1	Orb of Tishan	 11625	1	 6
+Bank11-Slot1-Slot1	Empty	 0	0	 0
+Bank11-Slot1-Slot2	Empty	 0	0	 0
+Bank11-Slot2	Orb of Tishan	 11625	1	 6
+Bank11-Slot2-Slot1	Empty	 0	0	 0
+Bank11-Slot2-Slot2	Empty	 0	0	 0
+Bank11-Slot3	Orb of Tishan	 11625	1	 6
+Bank11-Slot3-Slot1	Empty	 0	0	 0
+Bank11-Slot3-Slot2	Empty	 0	0	 0
+Bank11-Slot4	Orb of Tishan	 11625	1	 6
+Bank11-Slot4-Slot1	Empty	 0	0	 0
+Bank11-Slot4-Slot2	Empty	 0	0	 0
+Bank11-Slot5	Orb of Tishan	 11625	1	 6
+Bank11-Slot5-Slot1	Empty	 0	0	 0
+Bank11-Slot5-Slot2	Empty	 0	0	 0
+Bank11-Slot6	Orb of Tishan	 11625	1	 6
+Bank11-Slot6-Slot1	Empty	 0	0	 0
+Bank11-Slot6-Slot2	Empty	 0	0	 0
+Bank11-Slot7	Orb of Tishan	 11625	1	 6
+Bank11-Slot7-Slot1	Empty	 0	0	 0
+Bank11-Slot7-Slot2	Empty	 0	0	 0
+Bank11-Slot8	Orb of Tishan	 11625	1	 6
+Bank11-Slot8-Slot1	Empty	 0	0	 0
+Bank11-Slot8-Slot2	Empty	 0	0	 0
+Bank12	Backpack	17005	 1	8
+Bank12-Slot1	Warhammer of Divine Grace	 11611	1	 6
+Bank12-Slot1-Slot1	Empty	 0	0	 0
+Bank12-Slot1-Slot2	Empty	 0	0	 0
+Bank12-Slot2	Gold Plated Koshigatana	 11630	1	 6
+Bank12-Slot2-Slot1	Empty	 0	0	 0
+Bank12-Slot2-Slot2	Empty	 0	0	 0
+Bank12-Slot3	Warhammer of Divine Grace	 11611	1	 6
+Bank12-Slot3-Slot1	Empty	 0	0	 0
+Bank12-Slot3-Slot2	Empty	 0	0	 0
+Bank12-Slot4	Gold Plated Koshigatana	 11630	1	 6
+Bank12-Slot4-Slot1	Empty	 0	0	 0
+Bank12-Slot4-Slot2	Empty	 0	0	 0
+Bank12-Slot5	Warhammer of Divine Grace	 11611	1	 6
+Bank12-Slot5-Slot1	Empty	 0	0	 0
+Bank12-Slot5-Slot2	Empty	 0	0	 0
+Bank12-Slot6	Staff of the Earthcrafter	 11649	1	 6
+Bank12-Slot6-Slot1	Empty	 0	0	 0
+Bank12-Slot6-Slot2	Empty	 0	0	 0
+Bank12-Slot7	Warhammer of Divine Grace	 11611	1	 6
+Bank12-Slot7-Slot1	Empty	 0	0	 0
+Bank12-Slot7-Slot2	Empty	 0	0	 0
+Bank12-Slot8	Hierophant`s Crook	11629	 1	6
+Bank12-Slot8-Slot1	Empty	 0	0	 0
+Bank12-Slot8-Slot2	Empty	 0	0	 0
+Bank13	Backpack	17005	 1	8
+Bank13-Slot1	Empty	 0	0	 0
+Bank13-Slot2	Platinum Blue Diamond Tiara	 30367	1	 6
+Bank13-Slot2-Slot1	Empty	 0	0	 0
+Bank13-Slot2-Slot2	Empty	 0	0	 0
+Bank13-Slot3	Platinum Blue Diamond Tiara	 30367	1	 6
+Bank13-Slot3-Slot1	Empty	 0	0	 0
+Bank13-Slot3-Slot2	Empty	 0	0	 0
+Bank13-Slot4	Platinum Blue Diamond Tiara	 30367	1	 6
+Bank13-Slot4-Slot1	Empty	 0	0	 0
+Bank13-Slot4-Slot2	Empty	 0	0	 0
+Bank13-Slot5	Empty	 0	0	 0
+Bank13-Slot6	Empty	 0	0	 0
+Bank13-Slot7	Empty	 0	0	 0
+Bank13-Slot8	Empty	 0	0	 0
+Bank14	Backpack	17005	 1	8
+Bank14-Slot1	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot1-Slot1	Empty	 0	0	 0
+Bank14-Slot1-Slot2	Empty	 0	0	 0
+Bank14-Slot2	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot2-Slot1	Empty	 0	0	 0
+Bank14-Slot2-Slot2	Empty	 0	0	 0
+Bank14-Slot3	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot3-Slot1	Empty	 0	0	 0
+Bank14-Slot3-Slot2	Empty	 0	0	 0
+Bank14-Slot4	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot4-Slot1	Empty	 0	0	 0
+Bank14-Slot4-Slot2	Empty	 0	0	 0
+Bank14-Slot5	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot5-Slot1	Empty	 0	0	 0
+Bank14-Slot5-Slot2	Empty	 0	0	 0
+Bank14-Slot6	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot6-Slot1	Empty	 0	0	 0
+Bank14-Slot6-Slot2	Empty	 0	0	 0
+Bank14-Slot7	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot7-Slot1	Empty	 0	0	 0
+Bank14-Slot7-Slot2	Empty	 0	0	 0
+Bank14-Slot8	Blight, Hammer of the Scourge	 11628	1	 6
+Bank14-Slot8-Slot1	Empty	 0	0	 0
+Bank14-Slot8-Slot2	Empty	 0	0	 0
+Bank15	Backpack	17005	 1	8
+Bank15-Slot1	Barbarian Spiritist`s Hammer	11647	 1	6
+Bank15-Slot1-Slot1	Empty	 0	0	 0
+Bank15-Slot1-Slot2	Empty	 0	0	 0
+Bank15-Slot2	Gold Plated Koshigatana	 11630	1	 6
+Bank15-Slot2-Slot1	Empty	 0	0	 0
+Bank15-Slot2-Slot2	Empty	 0	0	 0
+Bank15-Slot3	Blight, Hammer of the Scourge	 11628	1	 6
+Bank15-Slot3-Slot1	Empty	 0	0	 0
+Bank15-Slot3-Slot2	Empty	 0	0	 0
+Bank15-Slot4	Gold Plated Koshigatana	 11630	1	 6
+Bank15-Slot4-Slot1	Empty	 0	0	 0
+Bank15-Slot4-Slot2	Empty	 0	0	 0
+Bank15-Slot5	Barbarian Spiritist`s Hammer	11647	 1	6
+Bank15-Slot5-Slot1	Empty	 0	0	 0
+Bank15-Slot5-Slot2	Empty	 0	0	 0
+Bank15-Slot6	Gold Plated Koshigatana	 11630	1	 6
+Bank15-Slot6-Slot1	Empty	 0	0	 0
+Bank15-Slot6-Slot2	Empty	 0	0	 0
+Bank15-Slot7	Blight, Hammer of the Scourge	 11628	1	 6
+Bank15-Slot7-Slot1	Empty	 0	0	 0
+Bank15-Slot7-Slot2	Empty	 0	0	 0
+Bank15-Slot8	Empty	 0	0	 0
+Bank16	Earthshaker	 5667	 1	6
+Bank16-Slot1	Empty	 0	0	 0
+Bank16-Slot2	Empty	 0	0	 0
+Bank17	Empty	 0	0	 0
+Bank18	Empty	 0	0	 0
+Bank19	Empty	 0	0	 0
+Bank20	Empty	 0	0	 0
+Bank21	Empty	 0	0	 0
+Bank22	Empty	 0	0	 0
+Bank23	Empty	 0	0	 0
+Bank24	Empty	 0	0	 0
+SharedBank1	 Backpack	 17005	1	 8
+SharedBank1-Slot1	 Empty	0	 0	0
+SharedBank1-Slot2	 Empty	0	 0	0
+SharedBank1-Slot3	 Empty	0	 0	0
+SharedBank1-Slot4	 Empty	0	 0	0
+SharedBank1-Slot5	 Empty	0	 0	0
+SharedBank1-Slot6	 Empty	0	 0	0
+SharedBank1-Slot7	 Dragon Bone Bracelet	 11606	1	 6
+SharedBank1-Slot7-Slot1	 Empty	0	 0	0
+SharedBank1-Slot7-Slot2	 Empty	0	 0	0
+SharedBank1-Slot8	 Dragon Bone Bracelet	 11606	1	 6
+SharedBank1-Slot8-Slot1	 Empty	0	 0	0
+SharedBank1-Slot8-Slot2	 Empty	0	 0	0
+SharedBank2	 Backpack	 17005	1	 8
+SharedBank2-Slot1	 Crystalline Spear	11610	 1	6
+SharedBank2-Slot1-Slot1	 Empty	0	 0	0
+SharedBank2-Slot1-Slot2	 Empty	0	 0	0
+SharedBank2-Slot2	 Crystalline Spear	11610	 1	6
+SharedBank2-Slot2-Slot1	 Empty	0	 0	0
+SharedBank2-Slot2-Slot2	 Empty	0	 0	0
+SharedBank2-Slot3	 Crystalline Spear	11610	 1	6
+SharedBank2-Slot3-Slot1	 Empty	0	 0	0
+SharedBank2-Slot3-Slot2	 Empty	0	 0	0
+SharedBank2-Slot4	 Crystalline Spear	11610	 1	6
+SharedBank2-Slot4-Slot1	 Empty	0	 0	0
+SharedBank2-Slot4-Slot2	 Empty	0	 0	0
+SharedBank2-Slot5	 Empty	0	 0	0
+SharedBank2-Slot6	 Empty	0	 0	0
+SharedBank2-Slot7	 Empty	0	 0	0
+SharedBank2-Slot8	 Empty	0	 0	0
+SharedBank3	 Empty	0	 0	0
+SharedBank4	 Empty	0	 0	0

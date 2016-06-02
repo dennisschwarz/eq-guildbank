@@ -49,7 +49,7 @@
               <h4>Equipped Items:</h4>
               <?php if(!empty($characterItems) && count($characterItems) > 0): ?>
                 <ul id="inventory">
-                  <?php foreach($inventoryItems as $itemKey => $item): ?>
+                  <?php foreach($characterItems as $itemKey => $item): ?>
                     <?php if(isset($item['ID']) && (int)$item['ID'] > 0): ?>
                       <li><a href="http://lucy.allakhazam.com/itemraw.html?id=<?php print $item['ID']; ?>"><?php print $item['Location'] . ' - ' . ((int)$item['Count'] > 1 ? $item['Count'] . 'x ' : '') . $item['Name']; ?></a></li>
                     <?php else: ?>
