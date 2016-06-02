@@ -11,7 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="css/normalize.min.css">
+<!--         <link rel="stylesheet" href="css/normalize.min.css"> -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -36,54 +38,8 @@
 
         <div class="main-container">
             <div class="main wrapper clearfix">
-              <?php
-              require_once('include/EQParser.php');
-              $eqParser = new EQParser;
-              $charInv = file_get_contents('./upload/Caerbank-Inventory.txt');
-              $eqParser->parseFile($charInv);
-              $characterItems = $eqParser->getCharacterItems();
-              $inventoryItems = $eqParser->getInventoryItems();
-              $bankItems = $eqParser->getBankItems();
-              ?>
-
-              <h4>Equipped Items:</h4>
-              <?php if(!empty($characterItems) && count($characterItems) > 0): ?>
-                <ul id="inventory">
-                  <?php foreach($characterItems as $itemKey => $item): ?>
-                    <?php if(isset($item['ID']) && (int)$item['ID'] > 0): ?>
-                      <li><a href="http://lucy.allakhazam.com/itemraw.html?id=<?php print $item['ID']; ?>"><?php print $item['Location'] . ' - ' . ((int)$item['Count'] > 1 ? $item['Count'] . 'x ' : '') . $item['Name']; ?></a></li>
-                    <?php else: ?>
-                      <li><?php print $item['Location'] . ' - ' . $item['Name']; ?></li>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                </ul>
-              <?php endif; ?>
-
-              <h4>Inventory Items:</h4>
-              <?php if(!empty($inventoryItems) && count($inventoryItems) > 0): ?>
-                <ul id="inventory">
-                  <?php foreach($inventoryItems as $itemKey => $item): ?>
-                    <?php if(isset($item['ID']) && (int)$item['ID'] > 0): ?>
-                      <li><a href="http://lucy.allakhazam.com/itemraw.html?id=<?php print $item['ID']; ?>"><?php print $item['Location'] . ' - ' . ((int)$item['Count'] > 1 ? $item['Count'] . 'x ' : '') . $item['Name']; ?></a></li>
-                    <?php else: ?>
-                      <li><?php print $item['Location'] . ' - ' . $item['Name']; ?></li>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                </ul>
-              <?php endif; ?>
-
-              <h4>Bank Items:</h4>
-              <?php if(!empty($bankItems) && count($bankItems) > 0): ?>
-                <ul id="inventory">
-                  <?php foreach($bankItems as $itemKey => $item): ?>
-                    <?php if(isset($item['ID']) && (int)$item['ID'] > 0): ?>
-                      <li><a href="http://lucy.allakhazam.com/itemraw.html?id=<?php print $item['ID']; ?>"><?php print $item['Location'] . ' - ' . ((int)$item['Count'] > 1 ? $item['Count'] . 'x ' : '') . $item['Name']; ?></a></li>
-                    <?php else: ?>
-                      <li><?php print $item['Location'] . ' - ' . $item['Name']; ?></li>
-                    <?php endif; ?>
-                  <?php endforeach; ?>
-                </ul>
-              <?php endif; ?>
+              <div id="file-upload-container"><h4>Drop File Here!</h4></div>
+              <div id="parse-result"></div>
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
@@ -96,7 +52,12 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script type="text/javascript" src="http://zam.zamimg.com/j/tooltips.js"></script>
+        <!-- Optional theme -->
+<!--         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
 
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="js/vendor/dropzone.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

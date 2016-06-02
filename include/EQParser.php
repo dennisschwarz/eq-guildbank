@@ -4,6 +4,7 @@ class EQParser {
   protected $fileRawData = null;
   protected $parsedItems = null;
   protected $dbRawData = null;
+  protected $uploadPath = '/var/www/html/eq-guildbank/upload/';
   public $characterItems;
   public $inventoryItems;
   public $bankItems;
@@ -51,32 +52,40 @@ $i = 1;
     }
   }
 
-  public function parseFile($file) {
-    if(isset($file) && strlen($file) > 0) {
-      $this->fileRawData = $file;
-      $result = array();
-      $rows = explode("\n", $file);
-      $header = explode("\t", array_shift($rows));
+  public function parseFile($filename) {
+    if(isset($filename) && file_exists($this->uploadPath . $filename)) {
+      $file = file_get_contents($this->uploadPath . $filename);
+      if(strlen($file) > 0) {
+        $this->fileRawData = $file;
+        $result = array();
+        $rows = explode("\n", $file);
+        $header = explode("\t", array_shift($rows));
+  
+        foreach($rows as $rowKey => $row) {
+          $item = explode("\t", $row);
+          $filterItem = array();
+          foreach($item as $colKey => $col) {
+            $colName = strtolower($header[$colKey]);
 
-      foreach($rows as $rowKey => $row) {
-        $item = explode("\t", $row);
-        $filterItem = array();
-        foreach($item as $colKey => $col) {
-          switch($header[$colKey]) {
-            case 'ID':
-              $col = (int)trim($col);
-            break;
+            switch($colName) {
+              case 'id':
+                $col = (int)trim($col);
+              break;
+
+              case 'name':
+                $col = trim($col);
+              break;
+            }
+  
+            $filterItem[$colName] = $col;
           }
-
-          $filterItem[$header[$colKey]] = $col;
+          $result[] = $filterItem;
         }
-
-        $result[] = $filterItem;
-      }
-
-      if(!empty($result) && count($result) > 0) {
-        $this->parsedItems = $result;
-        $this->parseItems();
+  
+        if(!empty($result) && count($result) > 0) {
+          $this->parsedItems = $result;
+          return $this->parseItems();
+        }
       }
     }
   }
@@ -87,8 +96,8 @@ $i = 1;
       $filteredResult = array();
 
       foreach($items as $itemKey => $item) {
-        if(isset($item['Location']) && $item['Location'] != '' && $item['Location'] !== null) {
-          if(($slotCategory = $this->filterSlot($item['Location'])) !== false) {
+        if(isset($item['location']) && $item['location'] != '' && $item['location'] !== null) {
+          if(($slotCategory = $this->filterSlot($item['location'])) !== false) {
             switch($slotCategory) {
               case 'character':
                 $this->characterItems[] = $item;
@@ -113,10 +122,7 @@ $i = 1;
         }
       }
 
-      if(!empty($filteredResult) && count($filteredResult)) {
-
-        return $filteredResult;
-      }
+      return true;
     }
   }
 
@@ -145,9 +151,9 @@ $i = 1;
       if(!empty($filter)) {
       } else {
         foreach($items as $itemKey => $item) {
-          if(isset($item['Name']) && strtolower($item['Name']) != 'empty') {
+//           if(isset($item['name']) && strtolower($item['name']) != 'empty') {
             $result[] = $item;
-          }
+//           }
         }
       }
       return $result;
@@ -167,7 +173,12 @@ $i = 1;
   }
 
   public function getAllItems($filter = array()) {
-    return $this->filterItems($this->parsedItems, array());
+    $result = array();
+    $result['characterItems'] = $this->filterItems($this->characterItems, array());
+    $result['inventoryItems'] = $this->filterItems($this->inventoryItems, array());
+    $result['bankItems'] = $this->filterItems($this->bankItems, array());
+
+    return $result;
   }
 
   public function getDBItems($filter = array()) {
