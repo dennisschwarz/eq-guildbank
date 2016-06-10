@@ -14,7 +14,7 @@ $(document).ready(function() {
       if(event.status == 'success') {
         if(response.length > 0 && response != '') {
           items = $.parseJSON(response);
-          populateList(items);
+          populateList(items, true);
           $("#upload-modal").modal("hide");
         }
       }

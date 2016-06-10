@@ -65,6 +65,9 @@ $dbChangesets = array(
   ),
 */
   "1" => array(
+    "DROP TABLE IF EXISTS `db_revision`;",
+    "CREATE TABLE `db_revision` (`revision_id` int(11) NOT NULL DEFAULT '0') ENGINE=InnoDB DEFAULT CHARSET=latin1;",
+    "INSERT INTO `db_revision` (`revision_id`) VALUES (0);",
     "DROP TABLE IF EXISTS `tbl_characters`;",
     "CREATE TABLE `tbl_characters` (
       `internal_character_id` int(11) NOT NULL AUTO_INCREMENT,
