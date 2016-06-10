@@ -1,0 +1,387 @@
+Location	Name	ID	Count	Slots
+Charm	Empty	0	0	0
+Ear	Electrum Jasper Earring	14629	1	6
+Ear-Slot1	Empty	0	0	0
+Head	Zaharn's Coronet	3000	1	6
+Head-Slot1	Empty	0	0	0
+Head-Slot2	Empty	0	0	0
+Face	Raw-hide Mask	2138	1	6
+Face-Slot1	Empty	0	0	0
+Ear	Electrum Jasper Earring	14629	1	6
+Ear-Slot1	Empty	0	0	0
+Neck	Chrysoberyl Talisman	10146	1	6
+Neck-Slot1	Empty	0	0	0
+Shoulders	Bloodstained Mantle	3309	1	6
+Shoulders-Slot1	Empty	0	0	0
+Arms	Bone Armplates	10104	1	6
+Arms-Slot1	Empty	0	0	0
+Arms-Slot2	Empty	0	0	0
+Back	Kunzar Cloak	1617	1	6
+Back-Slot1	Empty	0	0	0
+Wrist	Large Banded Bracer	3085	1	6
+Wrist-Slot1	Empty	0	0	0
+Wrist-Slot2	Empty	0	0	0
+Wrist	Serpentine Bracer	10148	1	6
+Wrist-Slot1	Empty	0	0	0
+Wrist-Slot2	Empty	0	0	0
+Range	Gloomingdeep Lantern	9979	1	6
+Range-Slot1	Empty	0	0	0
+Hands	Jarsath Scale Gauntlets	3255	1	6
+Hands-Slot1	Empty	0	0	0
+Hands-Slot2	Empty	0	0	0
+Primary	Slime Coated Harpoon	7223	1	6
+Primary-Slot1	Empty	0	0	0
+Primary-Slot2	Empty	0	0	0
+Secondary	Stone Totem	10331	1	6
+Secondary-Slot1	Empty	0	0	0
+Fingers	Silver Jasper Ring	14628	1	6
+Fingers-Slot1	Empty	0	0	0
+Fingers	Silver Jasper Ring	14628	1	6
+Fingers-Slot1	Empty	0	0	0
+Chest	Bloodstained Tunic	3308	1	6
+Chest-Slot1	Empty	0	0	0
+Chest-Slot2	Empty	0	0	0
+Legs	Jarsath Scale Leggings	3256	1	6
+Legs-Slot1	Empty	0	0	0
+Legs-Slot2	Empty	0	0	0
+Feet	Bear-hide Boots	2903	1	6
+Feet-Slot1	Empty	0	0	0
+Feet-Slot2	Empty	0	0	0
+Waist	Large Banded Belt	3083	1	6
+Waist-Slot1	Empty	0	0	0
+Power Source	Empty	0	0	0
+Ammo	Empty	0	0	0
+General1	Backpack*	32601	1	8
+General1-Slot1	Goblin Frost Totem	13744	1	6
+General1-Slot1-Slot1	Empty	0	0	0
+General1-Slot2	Guise of the Deceiver	2469	1	6
+General1-Slot2-Slot1	Empty	0	0	0
+General1-Slot3	Initiate Symbol of the Tribunal	1376	1	6
+General1-Slot3-Slot1	Empty	0	0	0
+General1-Slot4	Reinforced Medicine Bag	17811	1	10
+General1-Slot4-Slot1	Empty	0	0	0
+General1-Slot4-Slot2	Empty	0	0	0
+General1-Slot4-Slot3	Empty	0	0	0
+General1-Slot4-Slot4	Empty	0	0	0
+General1-Slot4-Slot5	Empty	0	0	0
+General1-Slot4-Slot6	Empty	0	0	0
+General1-Slot4-Slot7	Empty	0	0	0
+General1-Slot4-Slot8	Empty	0	0	0
+General1-Slot4-Slot9	Empty	0	0	0
+General1-Slot4-Slot10	Empty	0	0	0
+General1-Slot5	Dusty Bloodstained Gloves	1404	1	6
+General1-Slot5-Slot1	Empty	0	0	0
+General1-Slot5-Slot2	Empty	0	0	0
+General1-Slot6	Mixing Bowl	70965	1	4
+General1-Slot6-Slot1	Empty	0	0	0
+General1-Slot6-Slot2	Empty	0	0	0
+General1-Slot6-Slot3	Empty	0	0	0
+General1-Slot6-Slot4	Empty	0	0	0
+General1-Slot7	Embroidering Needle	9724	1	6
+General1-Slot8	Large Sewing Kit	17880	1	8
+General1-Slot8-Slot1	Empty	0	0	0
+General1-Slot8-Slot2	Empty	0	0	0
+General1-Slot8-Slot3	Empty	0	0	0
+General1-Slot8-Slot4	Empty	0	0	0
+General1-Slot8-Slot5	Empty	0	0	0
+General1-Slot8-Slot6	Empty	0	0	0
+General1-Slot8-Slot7	Empty	0	0	0
+General1-Slot8-Slot8	Empty	0	0	0
+General2	Backpack	17005	1	8
+General2-Slot1	Skinning Knife	21565	1	6
+General2-Slot2	Iron Ration	13005	15	6
+General2-Slot3	Spell: Talisman of the Brute	19281	1	6
+General2-Slot4	Empty	0	0	0
+General2-Slot5	Drake Skull Helm	25557	1	6
+General2-Slot5-Slot1	Empty	0	0	0
+General2-Slot5-Slot2	Empty	0	0	0
+General2-Slot6	Empty	0	0	0
+General2-Slot7	Celestial Essence	9650	31	6
+General2-Slot8	Celestial Essence	9650	50	6
+General3	Backpack	17005	1	8
+General3-Slot1	Spell: Nullify Magic	15049	1	6
+General3-Slot2	Spell: Talisman of Jasinth	19264	1	6
+General3-Slot3	Spell: Blizzard Blast	15510	1	6
+General3-Slot4	Empty	0	0	0
+General3-Slot5	Fire Emerald	10033	1	6
+General3-Slot6	Sapphire	10034	1	6
+General3-Slot7	Spell: Tumultuous Strength	30428	1	6
+General3-Slot8	Honey Berry	12795	1	6
+General4	Backpack	17005	1	8
+General4-Slot1	Empty	0	0	0
+General4-Slot2	Blood of the Wolf	14439	3	6
+General4-Slot3	Empty	0	0	0
+General4-Slot4	Empty	0	0	0
+General4-Slot5	Potion of Unlife Awareness	14450	10	6
+General4-Slot6	Potion of Unlife Awareness	14450	10	6
+General4-Slot7	Potion of Unlife Awareness	14450	10	6
+General4-Slot8	Potion of Unlife Awareness	14450	10	6
+General5	Backpack	17005	1	8
+General5-Slot1	Red Hellebore	16820	1	6
+General5-Slot2	Empty	0	0	0
+General5-Slot3	Arnworth	93172	1	6
+General5-Slot4	Amanita Phalloide	16830	1	6
+General5-Slot5	Trakanon Idol	20883	1	6
+General5-Slot6	Bloodstained Mantle	3309	1	6
+General5-Slot6-Slot1	Empty	0	0	0
+General5-Slot7	Gate Potion	65114	10	6
+General5-Slot8	Potion of Unlife Awareness	14450	10	6
+General6	Backpack	17005	1	8
+General6-Slot1	Vial of Tamed Mercury	14440	1	6
+General6-Slot2	Potion of Greater Rejuvenation	14438	4	6
+General6-Slot3	Crystal Key	20033	1	6
+General6-Slot4	Serpentine Bracer	10148	1	6
+General6-Slot4-Slot1	Empty	0	0	0
+General6-Slot4-Slot2	Empty	0	0	0
+General6-Slot5	Distillate of Spirituality VI	37875	8	6
+General6-Slot6	Kilva's Skin of Flame	14453	10	6
+General6-Slot7	Distillate of Spirituality III	37872	12	6
+General6-Slot8	Distillate of Spirituality III	37872	20	6
+General7	Backpack	17005	1	8
+General7-Slot1	Empty	0	0	0
+General7-Slot2	Empty	0	0	0
+General7-Slot3	Empty	0	0	0
+General7-Slot4	Empty	0	0	0
+General7-Slot5	Empty	0	0	0
+General7-Slot6	Empty	0	0	0
+General7-Slot7	Elixir of Greater Concentration	14578	2	6
+General7-Slot8	Amanita Phalloide	16830	8	6
+General8	Medicine Bag	17901	1	8
+General8-Slot1	Empty	0	0	0
+General8-Slot2	Empty	0	0	0
+General8-Slot3	Empty	0	0	0
+General8-Slot4	Empty	0	0	0
+General8-Slot5	Empty	0	0	0
+General8-Slot6	Empty	0	0	0
+General8-Slot7	Empty	0	0	0
+General8-Slot8	Empty	0	0	0
+General9	Empty	0	0	0
+General10	Empty	0	0	0
+Held	Empty	0	0	0
+Bank1	Backpack	17005	1	8
+Bank1-Slot1	Pie Tin	13438	1	6
+Bank1-Slot2	Cream	9726	17	6
+Bank1-Slot3	Benzoin	14221	17	6
+Bank1-Slot4	Wolf Fillet in Cream	9750	13	6
+Bank1-Slot5	Dairy Spoon	9727	1	6
+Bank1-Slot6	Filleting Knife	9753	1	6
+Bank1-Slot7	Bixie Parts	13499	14	6
+Bank1-Slot8	Lizard Meat	13410	14	6
+Bank2	Backpack	17005	1	8
+Bank2-Slot1	Snakes Head Iris	16832	18	6
+Bank2-Slot2	Zombie Skin	13074	8	6
+Bank2-Slot3	Phosphorous Powder	24082	2	6
+Bank2-Slot4	Small Mammoth Tusks	10125	3	6
+Bank2-Slot5	Katuka Bark	93171	2	6
+Bank2-Slot6	Red Hellebore	16820	10	6
+Bank2-Slot7	Black Henbane	16556	1	6
+Bank2-Slot8	Empty	0	0	0
+Bank3	Backpack	17005	1	8
+Bank3-Slot1	Personal Diary Page	18450	1	6
+Bank3-Slot2	Merchant's Letter	18452	1	6
+Bank3-Slot3	Written Announcement	18453	1	6
+Bank3-Slot4	Empty	0	0	0
+Bank3-Slot5	Empty	0	0	0
+Bank3-Slot6	Empty	0	0	0
+Bank3-Slot7	Shiny Brass Shield	9307	1	6
+Bank3-Slot7-Slot1	Empty	0	0	0
+Bank3-Slot7-Slot2	Empty	0	0	0
+Bank3-Slot8	Empty	0	0	0
+Bank4	Backpack	17005	1	8
+Bank4-Slot1	White Wolf Skin	13768	1	6
+Bank4-Slot2	White Wolf Skin	13768	1	6
+Bank4-Slot3	White Wolf Skin	13768	1	6
+Bank4-Slot4	White Wolf Skin	13768	1	6
+Bank4-Slot5	White Wolf Skin	13768	1	6
+Bank4-Slot6	White Wolf Skin	13768	1	6
+Bank4-Slot7	White Wolf Skin	13768	1	6
+Bank4-Slot8	White Wolf Skin	13768	1	6
+Bank5	Backpack	17005	1	8
+Bank5-Slot1	Bottle of Milk	13087	20	6
+Bank5-Slot2	Mammoth Meat	13407	2	6
+Bank5-Slot3	Bottle of Milk	13087	14	6
+Bank5-Slot4	Filleted Wolf	9746	20	6
+Bank5-Slot5	Bear Fillet in Cream	9748	3	6
+Bank5-Slot6	Filleted Wolf	9746	12	6
+Bank5-Slot7	Clump of Dough	13090	6	6
+Bank5-Slot8	Clump of Dough	13090	20	6
+Bank6	Backpack	17005	1	8
+Bank6-Slot1	Bandages*	21779	20	6
+Bank6-Slot2	Orc Scalp	13791	11	6
+Bank6-Slot3	Illegible Scroll	13225	1	6
+Bank6-Slot4	Amber	10022	2	6
+Bank6-Slot5	Bone Barbs	19037	1	6
+Bank6-Slot6	Werebat Wing	13239	1	6
+Bank6-Slot7	Darkbone Marrow	16979	4	6
+Bank6-Slot8	Bone Chips	13073	3	6
+Bank7	Backpack	17005	1	8
+Bank7-Slot1	Orc Scalp	13791	14	6
+Bank7-Slot2	High Quality Bear Skin	13752	3	6
+Bank7-Slot3	Reinforced Medicine Bag	17811	1	10
+Bank7-Slot3-Slot1	Empty	0	0	0
+Bank7-Slot3-Slot2	Empty	0	0	0
+Bank7-Slot3-Slot3	Empty	0	0	0
+Bank7-Slot3-Slot4	Empty	0	0	0
+Bank7-Slot3-Slot5	Empty	0	0	0
+Bank7-Slot3-Slot6	Empty	0	0	0
+Bank7-Slot3-Slot7	Empty	0	0	0
+Bank7-Slot3-Slot8	Empty	0	0	0
+Bank7-Slot3-Slot9	Empty	0	0	0
+Bank7-Slot3-Slot10	Empty	0	0	0
+Bank7-Slot4	Tuft of Polar Bear Fur	77692	9	6
+Bank7-Slot5	Heady Kiola	16480	20	6
+Bank7-Slot6	Heady Kiola	16480	1	6
+Bank7-Slot7	Empty	0	0	0
+Bank7-Slot8	Puma Skin	13757	2	6
+Bank8	Backpack	17005	1	8
+Bank8-Slot1	White Wolf Skin	13768	1	6
+Bank8-Slot2	Polar Bear Skin	13761	6	6
+Bank8-Slot3	White Wolf Skin	13768	1	6
+Bank8-Slot4	Thick Caustic Fluid	1595	1	6
+Bank8-Slot5	Amanita Phalloide	16830	19	6
+Bank8-Slot6	Winter Lilly	63095	1	6
+Bank8-Slot7	Club*	9999	1	6
+Bank8-Slot7-Slot1	Empty	0	0	0
+Bank8-Slot7-Slot2	Empty	0	0	0
+Bank8-Slot8	Faded Blue Tunic*	13512	1	6
+Bank8-Slot8-Slot1	Empty	0	0	0
+Bank8-Slot8-Slot2	Empty	0	0	0
+Bank9	Tailored Large Bag	17084	1	6
+Bank9-Slot1	Bloodstained Mantle	3309	1	6
+Bank9-Slot1-Slot1	Empty	0	0	0
+Bank9-Slot2	Large Banded Leggings	3087	1	6
+Bank9-Slot2-Slot1	Empty	0	0	0
+Bank9-Slot2-Slot2	Empty	0	0	0
+Bank9-Slot3	Bloodstained Mantle	3309	1	6
+Bank9-Slot3-Slot1	Empty	0	0	0
+Bank9-Slot4	Large Banded Sleeves	3084	1	6
+Bank9-Slot4-Slot1	Empty	0	0	0
+Bank9-Slot4-Slot2	Empty	0	0	0
+Bank9-Slot5	Large Banded Helm	3077	1	6
+Bank9-Slot5-Slot1	Empty	0	0	0
+Bank9-Slot5-Slot2	Empty	0	0	0
+Bank9-Slot6	Bronze Girdle	4207	1	6
+Bank9-Slot6-Slot1	Empty	0	0	0
+Bank10	Backpack	17005	1	8
+Bank10-Slot1	Small Bronze Gauntlets	4222	1	6
+Bank10-Slot1-Slot1	Empty	0	0	0
+Bank10-Slot1-Slot2	Empty	0	0	0
+Bank10-Slot2	Empty	0	0	0
+Bank10-Slot3	Paineel Steel Mask	4382	1	6
+Bank10-Slot3-Slot1	Empty	0	0	0
+Bank10-Slot4	Small Splinted Bronze Cloak	4218	1	6
+Bank10-Slot4-Slot1	Empty	0	0	0
+Bank10-Slot5	Empty	0	0	0
+Bank10-Slot6	Empty	0	0	0
+Bank10-Slot7	Empty	0	0	0
+Bank10-Slot8	Empty	0	0	0
+Bank11	Backpack	17005	1	8
+Bank11-Slot1	Empty	0	0	0
+Bank11-Slot2	Empty	0	0	0
+Bank11-Slot3	Chunk of Meat	13085	20	6
+Bank11-Slot4	Wolf Meat	13403	16	6
+Bank11-Slot5	Chunk of Meat	13085	11	6
+Bank11-Slot6	Chunk of Meat	13085	20	6
+Bank11-Slot7	Snake Meat	13412	1	6
+Bank11-Slot8	Froglok Meat	13409	2	6
+Bank12	Backpack	17005	1	8
+Bank12-Slot1	Undead Froglok Tongue	16532	20	6
+Bank12-Slot2	Vodka	16582	2	6
+Bank12-Slot3	Undead Froglok Tongue	16532	20	6
+Bank12-Slot4	Undead Froglok Tongue	16532	20	6
+Bank12-Slot5	Permafrost Crystals	22121	2	6
+Bank12-Slot6	Lixt Wing Stalk	16998	2	6
+Bank12-Slot7	Winter Lilly	63095	1	6
+Bank12-Slot8	Tares Lichen	16555	3	6
+Bank13	Tailored Large Bag	17084	1	6
+Bank13-Slot1	Large Banded Mail	3080	1	6
+Bank13-Slot1-Slot1	Empty	0	0	0
+Bank13-Slot1-Slot2	Empty	0	0	0
+Bank13-Slot2	Large Banded Mail	3080	1	6
+Bank13-Slot2-Slot1	Empty	0	0	0
+Bank13-Slot2-Slot2	Empty	0	0	0
+Bank13-Slot3	Large Banded Mail	3080	1	6
+Bank13-Slot3-Slot1	Empty	0	0	0
+Bank13-Slot3-Slot2	Empty	0	0	0
+Bank13-Slot4	Large Banded Mail	3080	1	6
+Bank13-Slot4-Slot1	Empty	0	0	0
+Bank13-Slot4-Slot2	Empty	0	0	0
+Bank13-Slot5	Large Banded Helm	3077	1	6
+Bank13-Slot5-Slot1	Empty	0	0	0
+Bank13-Slot5-Slot2	Empty	0	0	0
+Bank13-Slot6	Large Banded Helm	3077	1	6
+Bank13-Slot6-Slot1	Empty	0	0	0
+Bank13-Slot6-Slot2	Empty	0	0	0
+Bank14	Backpack*	32601	1	8
+Bank14-Slot1	Serpentine Bracer	10148	1	6
+Bank14-Slot1-Slot1	Empty	0	0	0
+Bank14-Slot1-Slot2	Empty	0	0	0
+Bank14-Slot2	Giant Snakespine Belt	10103	1	6
+Bank14-Slot2-Slot1	Empty	0	0	0
+Bank14-Slot3	Skull-shaped Barbute	4301	1	6
+Bank14-Slot3-Slot1	Empty	0	0	0
+Bank14-Slot3-Slot2	Empty	0	0	0
+Bank14-Slot4	Chipped Bone Collar	10102	1	6
+Bank14-Slot4-Slot1	Empty	0	0	0
+Bank14-Slot5	Bloodstained Mantle	3309	1	6
+Bank14-Slot5-Slot1	Empty	0	0	0
+Bank14-Slot6	Silvery War Axe	5364	1	6
+Bank14-Slot6-Slot1	Empty	0	0	0
+Bank14-Slot6-Slot2	Empty	0	0	0
+Bank14-Slot7	Wooden Bands	20841	1	6
+Bank14-Slot8	Empty	0	0	0
+Bank15	Backpack	17005	1	8
+Bank15-Slot1	Picnic Basket	9656	20	6
+Bank15-Slot2	Picnic Basket	9656	20	6
+Bank15-Slot3	Picnic Basket	9656	20	6
+Bank15-Slot4	Picnic Basket	9656	20	6
+Bank15-Slot5	Wrath Orc Wristbands	12223	1	6
+Bank15-Slot5-Slot1	Empty	0	0	0
+Bank15-Slot5-Slot2	Empty	0	0	0
+Bank15-Slot6	Wrath Orc Wristbands	12223	1	6
+Bank15-Slot6-Slot1	Empty	0	0	0
+Bank15-Slot6-Slot2	Empty	0	0	0
+Bank15-Slot7	Onyx	10027	1	6
+Bank15-Slot8	Star Rose Quartz	10021	2	6
+Bank16	Backpack	17005	1	8
+Bank16-Slot1	Polar Bear Head	77586	1	6
+Bank16-Slot2	Drop of Mercury	22517	2	6
+Bank16-Slot3	Spiderling Silk	13099	4	6
+Bank16-Slot4	Woven Mandrake	9647	6	6
+Bank16-Slot5	Silk Thread	16486	10	6
+Bank16-Slot6	Woven Spider Silk	9914	3	6
+Bank16-Slot7	Spider Silk	13041	11	6
+Bank16-Slot8	Silk Cord	16489	1	6
+Bank17	Empty	0	0	0
+Bank18	Empty	0	0	0
+Bank19	Empty	0	0	0
+Bank20	Empty	0	0	0
+Bank21	Empty	0	0	0
+Bank22	Empty	0	0	0
+Bank23	Empty	0	0	0
+Bank24	Empty	0	0	0
+SharedBank1	Backpack	17005	1	8
+SharedBank1-Slot1	Empty	0	0	0
+SharedBank1-Slot2	Empty	0	0	0
+SharedBank1-Slot3	Empty	0	0	0
+SharedBank1-Slot4	Empty	0	0	0
+SharedBank1-Slot5	Empty	0	0	0
+SharedBank1-Slot6	Dwarven Axe	5300	1	6
+SharedBank1-Slot6-Slot1	Empty	0	0	0
+SharedBank1-Slot6-Slot2	Empty	0	0	0
+SharedBank1-Slot7	Empty	0	0	0
+SharedBank1-Slot8	Empty	0	0	0
+SharedBank2	Backpack	17005	1	8
+SharedBank2-Slot1	Elemental Binder	28043	1	6
+SharedBank2-Slot1-Slot1	Empty	0	0	0
+SharedBank2-Slot1-Slot2	Empty	0	0	0
+SharedBank2-Slot2	Crushbone Shoulderpads	13319	1	6
+SharedBank2-Slot2-Slot1	Empty	0	0	0
+SharedBank2-Slot3	Empty	0	0	0
+SharedBank2-Slot4	Basilisk Eye Stalk	16985	6	6
+SharedBank2-Slot5	Bone Chips	13073	58	6
+SharedBank2-Slot6	Ivory	22504	1	6
+SharedBank2-Slot7	Grave Mold	16817	20	6
+SharedBank2-Slot8	Grave Mold	16817	7	6
+SharedBank3	Empty	0	0	0
+SharedBank4	Empty	0	0	0

@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+require 'eqp/EQParser.php';
+$eqp = new EQParser();
+$eqp->install();
+$eqp->setLogfile('log.txt');
+//$eqp->debug();
+
+?>
+
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -6,7 +18,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>EverQuest Parser</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -23,12 +35,35 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- Modal -->
+        <!-- need Admin Rights Check -->
+
+        <div id="upload-modal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-body">
+                <div id="file-upload-container"><h4>Drop File Here!</h4></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="query-modal" class="modal fade" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-body"></div>
+            </div>
+          </div>
+        </div>
+
         <div class="header-container">
             <header class="wrapper clearfix">
                 <h1 class="title">h1.title</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">nav ul li a</a></li>
+                        <li><a href="#">Bank</a></li>
                         <li><a href="#">nav ul li a</a></li>
                         <li><a href="#">nav ul li a</a></li>
                     </ul>
@@ -38,7 +73,19 @@
 
         <div class="main-container">
             <div class="main wrapper clearfix">
-              <div id="file-upload-container"><h4>Drop File Here!</h4></div>
+              <div id="item-listing" class="row">
+                <?php if(($characters = $eqp->execute("Characters", "getAll", array())) !== false) { ?>
+                  <select id="filter-by-character" class="col-xs-12 col-sm-4 col-sm-offset-8">
+                  <?php foreach($characters as $characterKey => $character) { ?>
+                    <option value="0">Please select ...</option>
+                    <option value="<?php print $character['internal_character_id']; ?>"><?php print $character['character_name']; ?></option>
+                  <?php } ?>
+                  </select>
+                <?php } else { ?>
+<?php //var_dump($characters); ?>
+                  <div id="no-characters" class="col-xs-12 col-sm-4 col-sm-offset-8">No Characters found</div>
+                <?php } ?>
+                </div>
               <div id="parse-result"></div>
             </div> <!-- #main -->
         </div> <!-- #main-container -->
