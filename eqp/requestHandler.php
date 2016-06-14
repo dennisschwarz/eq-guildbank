@@ -8,12 +8,23 @@ if(isset($_POST) && !empty($_POST)) {
   if(isset($_POST['action'])) {
     switch($_POST['action']) {
       case 'checkProfile':
-        if(!$eqParser->execute('Characters', 'getAll', array('character_name' => $_POST['profileName']))) {
+        if(!($characterInfo = $eqParser->execute('Characters', 'getAll', array('character_name' => $_POST['profileName'])))) {
           $responseHTML = '<div id="response"></div>'
                         . '<p>This Character does not exist in our Database.<br /><br />Do you want to create the proceed and then import the items?</p>'
                         . '<div id="cancel-import" class="button">Cancel</div>'
                         . '<div id="create-and-import" class="button">Create Character and Import</div>';
           die(json_encode(array('success' => false, 'html' => $responseHTML)));
+        } else {
+          if(count($characterInfo) == 1) {
+            $characterInfo = $characterInfo[0];
+            $responseHTML = '<div id="response"></div>'
+                          . '<p>' . $characterInfo['character_name'] . ' already has items in our Database.<br /><br />Do you want to import and overwrite the items?</p>'
+                          . '<div id="cancel-import" class="button">Cancel</div>'
+                          . '<div id="erase-and-import" class="button">Import and Overwrite</div>';
+            die(json_encode(array('success' => true, 'html' => $responseHTML, 'characterId' => $characterInfo['internal_character_id'])));
+          } else {
+            // Multiple Characters
+          }
         }
       break;
 
@@ -65,6 +76,51 @@ if(isset($_POST) && !empty($_POST)) {
         
       break;
 
+      case 'eraseAndImport':
+        if(isset($_POST['characterId']) && (int)$_POST['characterId'] > 0 && ($characterInfo = $eqParser->execute('Characters', 'getOne', (int)$_POST['characterId'])) !== false) {
+          // Delete Items
+          if($eqParser->execute("Items", "delete", array('internal_character_id' => $characterInfo['internal_character_id']))) {
+            if(isset($_POST['items']) && !empty($_POST['items'])) {
+              $addArgs = array(
+                'internal_character_id' => $characterInfo['internal_character_id'],
+                'clean_import' => true,
+                'items' => array()
+              );
+              
+              // Iterate each Item
+              foreach($_POST['items'] as $itemKey => $item) {
+                // Prepare first:
+                // Check if Items already exists in DB, else add
+                if(($itemResult = $eqParser->execute('Items', 'getAll', array('external_item_id' => (int)$item['id']))) !== false) {
+                } else {
+                  $addArgs['items'][] = array(
+                    'external_item_id' => $item['id'],
+                    'item_name' => $item['name'],
+                    'item_location' => $item['location'],
+                    'internal_character_id' => $characterInfo['internal_character_id'],
+                    'item_count' => $item['count']
+                  );
+                }
+                // Check if Slot exists in DB, else add
+                // Add item / char relation
+              }
+
+              // All Items imported
+              if($eqParser->execute('Items', 'importAll', $addArgs)) {
+                $responseHTML = '<div id="response">'
+                              . '<p>All items have been successfully imported</p>'
+                              . '<div id="finish-import" class="button">Ok</div>'
+                              . '</div>';
+
+                die(json_encode(array('success' => true, 'response' => $responseHTML)));
+              }
+            }
+          } else {
+            // Could not delete
+          }
+        }
+      break;
+
       case 'getItems':
         if(isset($_POST['characterId']) && (int)$_POST['characterId'] > 0 && ($characterInfo = $eqParser->execute('Characters', 'getOne', (int)$_POST['characterId'])) !== false) {
           if(($items = $eqParser->execute('Items', 'getAll', array('internal_character_id' => (int)$_POST['characterId']))) !== false) {
@@ -74,6 +130,10 @@ if(isset($_POST) && !empty($_POST)) {
             die(json_encode($eqParser->getAllItems()));
           }
         }
+      break;
+
+      case 'getCharacters':
+        die(json_encode($eqParser->execute('Characters', 'getAll', array())));
       break;
     }
   }

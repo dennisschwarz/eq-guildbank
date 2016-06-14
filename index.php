@@ -44,6 +44,7 @@ $eqp->setLogfile('log.txt');
             <div class="modal-content">
               <div class="modal-body">
                 <div id="file-upload-container"><h4>Drop File Here!</h4></div>
+                <div id="parse-result"></div>
               </div>
             </div>
           </div>
@@ -60,34 +61,32 @@ $eqp->setLogfile('log.txt');
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">h1.title</h1>
-                <nav>
+                <h1 class="title col-xs-8">h1.title</h1>
+                <nav class="col-xs-4">
                     <ul>
-                        <li><a href="#">Bank</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
+                        <li class="col-xs-6"><a href="#">List Items</a></li>
+                        <li class="col-xs-6"><a id="import-dialog">Import Items</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
 
         <div class="main-container">
-            <div class="main wrapper clearfix">
-              <div id="item-listing" class="row">
-                <?php if(($characters = $eqp->execute("Characters", "getAll", array())) !== false) { ?>
-                  <select id="filter-by-character" class="col-xs-12 col-sm-4 col-sm-offset-8">
-                  <?php foreach($characters as $characterKey => $character) { ?>
-                    <option value="0">Please select ...</option>
-                    <option value="<?php print $character['internal_character_id']; ?>"><?php print $character['character_name']; ?></option>
-                  <?php } ?>
-                  </select>
-                <?php } else { ?>
-<?php //var_dump($characters); ?>
-                  <div id="no-characters" class="col-xs-12 col-sm-4 col-sm-offset-8">No Characters found</div>
-                <?php } ?>
-                </div>
-              <div id="parse-result"></div>
-            </div> <!-- #main -->
+          <div class="main wrapper clearfix">
+            <div id="item-listing" class="row">
+              <?php if(($characters = $eqp->execute("Characters", "getAll", array())) !== false) { ?>
+              <select id="filter-by-character" class="col-xs-12 col-sm-4 col-sm-offset-8">
+              <?php foreach($characters as $characterKey => $character) { ?>
+                <option value="0">Please select ...</option>
+                <option value="<?php print $character['internal_character_id']; ?>"><?php print $character['character_name']; ?></option>
+              <?php } ?>
+              </select>
+              <?php } else { ?>
+              <div id="no-characters" class="col-xs-12 col-sm-4 col-sm-offset-8">No Characters found</div>
+              <?php } ?>
+            </div>
+            <div id="result-list" class="row"></div>
+          </div> <!-- #main -->
         </div> <!-- #main-container -->
 
         <div class="footer-container">
