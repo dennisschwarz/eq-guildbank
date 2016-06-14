@@ -172,6 +172,7 @@ $(document).ready(function() {
           var result = $.parseJSON(response);
           if(result.success) {
             $("#query-modal .modal-body").html(result.response);
+            reloadCharacterDropdown();
           }
         }
       });

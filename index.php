@@ -76,8 +76,8 @@ $eqp->setLogfile('log.txt');
             <div id="item-listing" class="row">
               <?php if(($characters = $eqp->execute("Characters", "getAll", array())) !== false) { ?>
               <select id="filter-by-character" class="col-xs-12 col-sm-4 col-sm-offset-8">
+              <option value="0">Please select ...</option>
               <?php foreach($characters as $characterKey => $character) { ?>
-                <option value="0">Please select ...</option>
                 <option value="<?php print $character['internal_character_id']; ?>"><?php print $character['character_name']; ?></option>
               <?php } ?>
               </select>
