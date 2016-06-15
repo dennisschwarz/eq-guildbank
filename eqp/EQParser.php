@@ -278,6 +278,12 @@ class EQParser {
       $items = $this->parsedItems;
       $filteredResult = array();
 
+      // Clear old Items
+      $this->characterItems = array();
+      $this->inventoryItems = array();
+      $this->bankItems = array();
+      $this->guildbankItems = array();
+
       foreach($items as $itemKey => $item) {
         if(isset($item['location']) && $item['location'] != '' && $item['location'] !== null) {
           if(($slotCategory = $this->filterSlot($item['location'])) !== false) {

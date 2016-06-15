@@ -126,7 +126,7 @@ if(isset($_POST) && !empty($_POST)) {
           if(($items = $eqParser->execute('Items', 'getAll', array('internal_character_id' => (int)$_POST['characterId']))) !== false) {
             $eqParser->setCharacterName($characterInfo['character_name']);
             $eqParser->parseItems($items);
-            
+
             die(json_encode($eqParser->getAllItems()));
           }
         }

@@ -29,6 +29,7 @@ $(document).ready(function() {
 
   function populateList(listItem = 'parse-result', isImport = false) {
     if((items && items != undefined) && (listItem && $("#"+listItem).length > 0)) {
+      $("#"+listItem).empty();
       if(isImport) {
         var $form = $('<form id="import-form" action="" method="POST"></form>');
         var $menuBar = $('<div id="menu-bar"></div>');

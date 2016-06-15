@@ -36,6 +36,10 @@ class Items extends EQParser {
       if(isset($args['external_type_ids']) && is_array($args['external_type_ids']) && !empty($args['external_type_ids']) && count($args['external_type_ids']) > 0) {
         $where[] = "ttyp.external_type_id IN (" . implode($args['external_type_ids'], ', ') . ")";
       }
+      if(isset($args['internal_character_id']) && (int)$args['internal_character_id'] > 0 && $this->execute('Characters', 'getOne', (int)$args['internal_character_id'])) {
+        $where[] = "`internal_character_id` = " . (int)$args['internal_character_id'];
+      }
+
       $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode($where, ' AND ') : '');
       $sql = $this->getSql($sqlArgs);
 
