@@ -69,7 +69,7 @@ $(document).ready(function() {
             var $header = $('<h4>Character Name: '+items[k]+'</h4>');
             var $titleBar = '';
             if(!isImport) {
-              var $titleBar = $('<div class="row" id="sorting"><div class="col-xs-8"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="asc">Name:<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="desc"></div><div class="col-xs-4"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="asc">Amount<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="desc"></div></div>');
+              var $titleBar = $('<div class="row" id="sorting"><div class="col-xs-8"><img src="'+rootUrl+'img/icon-arrow-down-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="asc">Name:<img src="'+rootUrl+'img/icon-arrow-up-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="desc"></div><div class="col-xs-4"><img src="'+rootUrl+'img/icon-arrow-down-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="asc">Amount<img src="'+rootUrl+'img/icon-arrow-up-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="desc"></div></div>');
             }
             withItemList = false;
 
