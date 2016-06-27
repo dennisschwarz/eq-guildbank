@@ -9,16 +9,19 @@ class Items extends EQParser {
   public function getSql($args) {
     $sql = " SELECT"
          . " tite.internal_item_id,"
-         . " tite.external_item_id,"
+         . " tite.external_item_id as id,"
          . " tite.internal_character_id,"
          . " (SELECT tcha.character_name FROM " . $this->getTablePrefix() . "tbl_characters tcha WHERE tcha.internal_character_id = tite.internal_character_id) as character_name,"
          . " tite.item_name as name,"
          . " tite.item_location as location,"
-         . " tite.item_count as count"
+         . (isset($args['group_by']) && $args['group_by'] != '' ? " SUM(tite.item_count)" : " tite.item_count") ." as count"
 //          . " (SELECT tls.translation FROM " . $this->getTablePrefix() . "tbl_language_strings tls WHERE tls.language_string = tite.language_string AND tls.language_id = " . $this->getLanguageId() . ") as item_name"
          . " FROM " . $this->mainTable ." tite"
 //          . " LEFT JOIN " . $this->getTablePrefix() . "tbl_types ttyp ON ttyp.internal_type_id = tite.internal_type_id"
-         . $args['where'];
+         . $args['where']
+         . (isset($args['group_by']) && $args['group_by'] != '' ? $args['group_by'] : "")
+         . (isset($args['order_by']) && $args['order_by'] != '' ? $args['order_by'] : "")
+         . "";
 
     return $sql;
   }
@@ -40,7 +43,23 @@ class Items extends EQParser {
         $where[] = "`internal_character_id` = " . (int)$args['internal_character_id'];
       }
 
+      if(isset($args['group_by']) && isset($args['group_by']) != '') {
+        $sqlArgs['group_by'] = " GROUP BY tite." . $args['group_by'];
+      }
+
+      if(isset($args['order_by']) && isset($args['order_by']) != '') {
+        if(isset($args['order_by']['field']) && isset($args['order_by']['field']) != '' && isset($args['order_by']['direction']) && isset($args['order_by']['direction']) != '') {
+          if($args['order_by']['field'] == 'count') {
+            $sqlArgs['order_by'] = " ORDER BY " . $args['order_by']['field'] . " " . $args['order_by']['direction'];
+          } else {
+            $sqlArgs['order_by'] = " ORDER BY tite." . $args['order_by']['field'] . " " . $args['order_by']['direction'];
+          }
+        }
+      }
+
       $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode($where, ' AND ') : '');
+
+
       $sql = $this->getSql($sqlArgs);
 
       try {

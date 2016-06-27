@@ -123,11 +123,23 @@ if(isset($_POST) && !empty($_POST)) {
 
       case 'getItems':
         if(isset($_POST['characterId']) && (int)$_POST['characterId'] > 0 && ($characterInfo = $eqParser->execute('Characters', 'getOne', (int)$_POST['characterId'])) !== false) {
-          if(($items = $eqParser->execute('Items', 'getAll', array('internal_character_id' => (int)$_POST['characterId']))) !== false) {
+          $getArgs = array(
+            'internal_character_id' => (int)$_POST['characterId'],
+            'group_by' => 'external_item_id',
+          );
+
+          if((isset($_POST['field']) && $_POST['field'] != '') && (isset($_POST['direction']) && $_POST['direction'] != '')) {
+            $getArgs['order_by'] = array(
+              'field' => filter_var(trim($_POST['field']), FILTER_SANITIZE_STRING),
+              'direction' => filter_var(trim($_POST['direction']), FILTER_SANITIZE_STRING),
+            );
+          }
+
+          if(($items = $eqParser->execute('Items', 'getAll', $getArgs)) !== false) {
             $eqParser->setCharacterName($characterInfo['character_name']);
             $eqParser->parseItems($items);
 
-            die(json_encode($eqParser->getAllItems()));
+            die(json_encode($eqParser->getAllItems(array('unfiltered' => true))));
           }
         }
       break;

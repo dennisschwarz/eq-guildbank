@@ -27,7 +27,10 @@ $eqp->setLogfile('log.txt');
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
-
+        <script>
+          var rootUrl = '<?php print ROOT_URL; ?>';
+          var uploadDir = '<?php print UPLOAD_DIR; ?>';
+        </script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
@@ -61,7 +64,7 @@ $eqp->setLogfile('log.txt');
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title col-xs-8">h1.title</h1>
+                <h1 class="title col-xs-8">EQ Parser</h1>
                 <nav class="col-xs-4">
                     <ul>
                         <li class="col-xs-6"><a href="#">List Items</a></li>

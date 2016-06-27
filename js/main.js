@@ -35,12 +35,10 @@ $(document).ready(function() {
         var $menuBar = $('<div id="menu-bar"></div>');
         var $buttonImportAll = $('<div id="import-all" class="button">Import All Items</div>');
         $buttonImportAll.click(items, importAllItems);
-/*
         var $buttonImportSelected = $('<div id="import-selected" class="button">Import Selected Items</div>');
         $buttonImportSelected.click(items, importSelectedItems);
-*/
   
-        $menuBar.append($buttonImportAll/* , $buttonImportSelected */);
+        $menuBar.append($buttonImportAll, $buttonImportSelected);
   
         $form.append($menuBar);
       } else {
@@ -52,22 +50,29 @@ $(document).ready(function() {
 
         $container = $('<div class="item-container"></div>');
 
-        var $selector = $('<div class="toggle-all" id="toggle-'+k+'" data-item-type="'+k+'">toggle all</div>');
-        $selector.on("click", function() {
-          $self = $(this);
-          $("ul#"+$self.data('item-type')+" li").each(function() {
-            if($(this).hasClass("selected")) {
-              $(this).removeClass("selected");
-            } else {
-              $(this).addClass("selected");
-            }
+        if(isImport) {
+          var $selector = $('<div class="toggle-all" id="toggle-'+k+'" data-item-type="'+k+'">toggle all</div>');
+          $selector.on("click", function() {
+            $self = $(this);
+            $("ul#"+$self.data('item-type')+" li").each(function() {
+              if($(this).hasClass("selected")) {
+                $(this).removeClass("selected");
+              } else {
+                $(this).addClass("selected");
+              }
+            });
           });
-        });
+        }
 
         switch(k) {
           case 'characterName':
             var $header = $('<h4>Character Name: '+items[k]+'</h4>');
+            var $titleBar = '';
+            if(!isImport) {
+              var $titleBar = $('<div class="row" id="sorting"><div class="col-xs-8"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="asc">Name:<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="desc"></div><div class="col-xs-4"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="asc">Amount<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="desc"></div></div>');
+            }
             withItemList = false;
+
           break;
           case 'characterItems':
             var $header = $('<h4>Equipped Items:</h4>');
@@ -101,12 +106,20 @@ $(document).ready(function() {
             if(item.name.toLowerCase() == 'empty') {
                $item = $('<li><span class="link">'+item.name+'</span></li>');
             } else {
-               $item = $('<li data-item-id="'+item.id+'"><span class="link"><a href="http://lucy.allakhazam.com/itemraw.html?id='+item.id+'">'+item.name+'</a></span><span class="count">'+item.count+'x</span></li>');
+               $item = $('<li data-item-id="'+item.id+'" class="item"><span class="link"><a href="http://lucy.allakhazam.com/itemraw.html?id='+item.id+'" class="zam-link">'+item.name+'</a></span><span class="count">'+item.count+'x</span></li>');
+               $item.on("click", function() {
+                var $self = $(this);
+                if(!$self.hasClass("selected")) {
+                  $self.addClass("selected");
+                } else {
+                  $self.removeClass("selected");
+                }
+              });
             }
     
             $list.append($item);
           }
-          $container.append($header, $selector, $list);
+          $container.append($header, $selector, $titleBar, $list);
         } else {
           $container.append($header);
         }
@@ -149,10 +162,48 @@ $(document).ready(function() {
     });
   }
   function importSelectedItems(event) {
-    alert('under construction');
+    console.log(event);
+    var importData = event.data;
+
+    // Check if Profile Exists
+    var profileData = {
+      'action': 'checkProfile',
+      'profileName': importData.characterName
+    }
+    $.post('eqp/requestHandler.php', profileData, function(response) {
+      if(response) {
+        var result = $.parseJSON(response);
+        // Character exists, proceed with import
+         $("#upload-modal").modal('hide');
+        if(result.success && parseInt(result.characterId) > 0) {
+          var $responseHTML = $(result.html);
+          items.characterId = parseInt(result.characterId);
+          $("#query-modal .modal-body").html($responseHTML);
+          $("#query-modal").modal('show');
+
+          $("#parse-result #import-form li.item.selected").each(function() {
+            var $self = $(this);
+            for(var k in items) {
+              var itemsBlock = items[k];
+              for(var j in itemsBlock) {
+                var item = itemsBlock[j];
+                if(item && item.id && parseInt(item.id) == parseInt($self.data("item-id"))) {
+                  selectedItems.push(item);
+                }
+              }
+            }
+          });
+        } else {
+          // To Do: Dropdown with Server?
+          var $responseHTML = $(result.html);
+          $("#query-modal .modal-body").html($responseHTML);
+          $("#query-modal").modal('show');
+        }
+      }
+    });
   }
   function createCharacterAndImport() {
-    if(items.selectedItems == undefined || items.selectedItems === null) {
+    if(selectedItems == undefined || selectedItems === null) {
       for(var k in items) {
         if(k != 'characterName' && items[k].length > 0) {
           for(var i in items[k]) {
@@ -181,7 +232,7 @@ $(document).ready(function() {
   }
   function eraseAndImport(characterId = items.characterId) {
     if(parseInt(characterId) > 0) {
-      if(items.selectedItems == undefined || items.selectedItems === null) {
+      if(selectedItems == undefined || selectedItems === null) {
         for(var k in items) {
           if(k != 'characterName' && items[k].length > 0) {
             for(var i in items[k]) {
@@ -190,7 +241,7 @@ $(document).ready(function() {
           }
         }
       }
-  
+
       var profileData = {
         'action': 'eraseAndImport',
         'characterId': characterId,
@@ -247,6 +298,9 @@ $(document).ready(function() {
   $("#parse-result h4").on('click', function() {
     $(this).next("ul").toggle();
   });
+  $("#parse-result a.zam-link").on('click', function(e) {
+    e.preventDefault();
+  });
   $("#filter-by-character").on('change', function() {
     var $self = $(this);
     if($self.val() > 0) {
@@ -274,7 +328,7 @@ $(document).ready(function() {
     $(this).find("#file-upload-container").show();
     $(this).find("#parse-result").empty();
   });
-  $(document).on('click', '.button', function() {
+  $(document).on('click', '.button, .sort-button', function() {
     var $self = $(this);
     switch($self.attr('id')) {
       case 'cancel-import':
@@ -293,6 +347,43 @@ $(document).ready(function() {
         $("#query-modal").modal("hide");
         $("#parse-result").empty();
       break;
+
+      case 'sort-name':
+        var requestData = {
+          'action': 'getItems',
+          'characterId': $("#filter-by-character").val(),
+          'field': 'item_name',
+          'direction': $self.data('order')
+        }
+        $.post('eqp/requestHandler.php', requestData, function(response) {
+          if(response) {
+            var result = $.parseJSON(response);
+            if(result) {
+              items = result;
+              populateList('result-list');
+            }
+          }
+        });
+      break;
+
+      case 'sort-amount':
+        var requestData = {
+          'action': 'getItems',
+          'characterId': $("#filter-by-character").val(),
+          'field': 'count',
+          'direction': $self.data('order')
+        }
+        $.post('eqp/requestHandler.php', requestData, function(response) {
+          if(response) {
+            var result = $.parseJSON(response);
+            if(result) {
+              items = result;
+              populateList('result-list');
+            }
+          }
+        });
+      break;
+
     }
   });
 });

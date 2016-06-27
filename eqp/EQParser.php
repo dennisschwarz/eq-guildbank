@@ -367,11 +367,19 @@ class EQParser {
     return $this->filterItems($this->bankItems, array());
   }
   public function getAllItems($filter = array()) {
-    $result = array();
-    $result['characterName'] = $this->characterName;
-    $result['characterItems'] = $this->filterItems($this->characterItems, array());
-    $result['inventoryItems'] = $this->filterItems($this->inventoryItems, array());
-    $result['bankItems'] = $this->filterItems($this->bankItems, array());
+    if(empty($filter)) {
+      $result = array();
+      $result['characterName'] = $this->characterName;
+      $result['characterItems'] = $this->filterItems($this->characterItems, array());
+      $result['inventoryItems'] = $this->filterItems($this->inventoryItems, array());
+      $result['bankItems'] = $this->filterItems($this->bankItems, array());
+    } else {
+      if(isset($filter['unfiltered']) && $filter['unfiltered']) {
+        $result = array();
+        $result['characterName'] = $this->characterName;
+        $result['allItems'] = $this->parsedItems;
+      }
+    }
 
     return $result;
   }
