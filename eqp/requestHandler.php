@@ -42,7 +42,7 @@ if(isset($_POST) && !empty($_POST)) {
                 'clean_import' => true,
                 'items' => array()
               );
-              
+
               // Iterate each Item
               foreach($_POST['items'] as $itemKey => $item) {
                 // Prepare first:
@@ -70,7 +70,11 @@ if(isset($_POST) && !empty($_POST)) {
 
                 die(json_encode(array('success' => true, 'response' => $responseHTML)));
               }
+            } else {
+              die('No items to import');
             }
+          } else {
+            die('Could not add Character');
           }
         }
         
@@ -145,7 +149,11 @@ if(isset($_POST) && !empty($_POST)) {
       break;
 
       case 'getCharacters':
-        die(json_encode($eqParser->execute('Characters', 'getAll', array())));
+        if(($characters = $eqParser->execute('Characters', 'getAll', array())) !== false) {
+          die(json_encode(array('success' => 'true', 'characters' => $characters)));
+        } else {
+          die(json_encode(array('success' => 'false', 'errorMsg' => 'Could not load Characters')));
+        }
       break;
     }
   }

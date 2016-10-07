@@ -3,7 +3,7 @@
 session_start();
 require 'eqp/EQParser.php';
 $eqp = new EQParser();
-$eqp->install();
+$eqp->install(true);
 $eqp->setLogfile('log.txt');
 //$eqp->debug();
 
@@ -85,7 +85,10 @@ $eqp->setLogfile('log.txt');
               <?php } ?>
               </select>
               <?php } else { ?>
-              <div id="no-characters" class="col-xs-12 col-sm-4 col-sm-offset-8">No Characters found</div>
+              <select id="filter-by-character" class="col-xs-12 col-sm-4 col-sm-offset-8">
+                <option value="0">No Characters found</option>
+              </select>
+<!--               <div id="no-characters" class="col-xs-12 col-sm-4 col-sm-offset-8">No Characters found</div> -->
               <?php } ?>
             </div>
             <div id="result-list" class="row"></div>

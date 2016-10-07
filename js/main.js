@@ -69,7 +69,7 @@ $(document).ready(function() {
             var $header = $('<h4>Character Name: '+items[k]+'</h4>');
             var $titleBar = '';
             if(!isImport) {
-              var $titleBar = $('<div class="row" id="sorting"><div class="col-xs-8"><img src="'+rootUrl+'img/icon-arrow-down-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="asc">Name:<img src="'+rootUrl+'img/icon-arrow-up-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="desc"></div><div class="col-xs-4"><img src="'+rootUrl+'img/icon-arrow-down-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="asc">Amount<img src="'+rootUrl+'img/icon-arrow-up-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="desc"></div></div>');
+              var $titleBar = $('<div class="row" id="sorting"><div class="col-xs-8"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="asc">Name:<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="desc"></div><div class="col-xs-4"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="asc">Amount<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="desc"></div></div>');
             }
             withItemList = false;
 
@@ -106,7 +106,7 @@ $(document).ready(function() {
             if(item.name.toLowerCase() == 'empty') {
                $item = $('<li><span class="link">'+item.name+'</span></li>');
             } else {
-               $item = $('<li data-item-id="'+item.id+'" class="item"><span class="link"><a href="http://lucy.allakhazam.com/itemraw.html?id='+item.id+'" class="zam-link">'+item.name+'</a></span><span class="count">'+item.count+'x</span></li>');
+               $item = $('<li data-item-id="'+item.id+'" class="item"><span class="link"><a href="http://lucy.allakhazam.com/itemraw.html?id='+item.id+'" class="zam-link">'+item.name+'</a></span><span class="count">x'+item.count+'</span></li>');
                $item.on("click", function() {
                 var $self = $(this);
                 if(!$self.hasClass("selected")) {
@@ -203,7 +203,7 @@ $(document).ready(function() {
     });
   }
   function createCharacterAndImport() {
-    if(selectedItems == undefined || selectedItems === null) {
+    if(selectedItems == undefined || selectedItems === null || selectedItems.length == 0) {
       for(var k in items) {
         if(k != 'characterName' && items[k].length > 0) {
           for(var i in items[k]) {
@@ -268,6 +268,7 @@ $(document).ready(function() {
         var result = $.parseJSON(response);
         if(result.success) {
           $selectBox = $("#filter-by-character").empty();
+          $selectBox.append($('<option value="0">Please select ...</option>'));
           for(var k in result.characters) {
             var characterInfo = result.characters[k];
             var $option = $('<option value="'+characterInfo.internal_character_id+'">'+characterInfo.character_name+'</option>');
