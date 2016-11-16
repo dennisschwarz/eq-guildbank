@@ -90,7 +90,7 @@ if(isset($_POST) && !empty($_POST)) {
                 'clean_import' => true,
                 'items' => array()
               );
-              
+
               // Iterate each Item
               foreach($_POST['items'] as $itemKey => $item) {
                 // Prepare first:

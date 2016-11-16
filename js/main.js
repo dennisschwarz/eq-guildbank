@@ -235,7 +235,7 @@ $(document).ready(function() {
   }
   function eraseAndImport(characterId = items.characterId) {
     if(parseInt(characterId) > 0) {
-      if(selectedItems == undefined || selectedItems === null) {
+      if(selectedItems == undefined || selectedItems === null || selectedItems.length == 0) {
         for(var k in items) {
           if(k != 'characterName' && items[k].length > 0) {
             for(var i in items[k]) {
