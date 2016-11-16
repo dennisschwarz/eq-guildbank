@@ -155,6 +155,31 @@ if(isset($_POST) && !empty($_POST)) {
           die(json_encode(array('success' => 'false', 'errorMsg' => 'Could not load Characters')));
         }
       break;
+
+      case 'exportItemsByTypeAndCharacter':
+        if((isset($_POST['characterId']) && (int)$_POST['characterId'] > 0 && ($characterInfo = $eqParser->execute('Characters', 'getOne', (int)$_POST['characterId'])) !== false)
+          && (isset($_POST['exportType']) && (string)$_POST['exportType'] != '')) {
+          $getArgs = array(
+            'internal_character_id' => (int)$_POST['characterId'],
+            'export_type' => filter_var(trim($_POST['exportType']), FILTER_SANITIZE_STRING),
+            'group_by' => 'external_item_id'
+          );
+
+          if(isset($_POST['itemIds']) && count($_POST['itemIds']) > 0) {
+          }
+
+          if((isset($_POST['field']) && $_POST['field'] != '') && (isset($_POST['direction']) && $_POST['direction'] != '')) {
+            $getArgs['order_by'] = array(
+              'field' => filter_var(trim($_POST['field']), FILTER_SANITIZE_STRING),
+              'direction' => filter_var(trim($_POST['direction']), FILTER_SANITIZE_STRING),
+            );
+          }
+
+          if(($exportResult = $eqParser->execute('Items', 'export', $getArgs)) !== false) {
+            die(json_encode(array('success' => true, 'exportData' => $exportResult)));
+          }
+        }
+      break;
     }
   }
 

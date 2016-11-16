@@ -21,6 +21,7 @@ $(document).ready(function() {
       }
     }
   });
+  var selectedCharacterId = 0;
 
 /*
   $("html").dropable(function() {
@@ -66,9 +67,11 @@ $(document).ready(function() {
 
         switch(k) {
           case 'characterName':
-            var $header = $('<h4>Character Name: '+items[k]+'</h4>');
+            var $header = $('<div class="header-bar"></div>');
+            $header.append('<h4>Character Name: '+items[k]+'</h4>');
             var $titleBar = '';
             if(!isImport) {
+              $header.append('<div id="export-list-by-character" class="button" data-toggle="modal" data-target="#export-modal">Export List</div>');
               var $titleBar = $('<div class="row" id="sorting"><div class="col-xs-8"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="asc">Name:<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-name" class="sort-button order-arrow" data-order="desc"></div><div class="col-xs-4"><img src="'+rootUrl+'/img/icon-arrow-down-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="asc">Amount<img src="'+rootUrl+'/img/icon-arrow-up-b-128.png" id="sort-amount" class="sort-button order-arrow" data-order="desc"></div></div>');
             }
             withItemList = false;
@@ -304,6 +307,7 @@ $(document).ready(function() {
   });
   $("#filter-by-character").on('change', function() {
     var $self = $(this);
+    selectedCharacterId = $self.val();
     if($self.val() > 0) {
       var requestData = {
         'action': 'getItems',
@@ -328,6 +332,31 @@ $(document).ready(function() {
   $("#upload-modal").on('hidden.bs.modal', function () {
     $(this).find("#file-upload-container").show();
     $(this).find("#parse-result").empty();
+  });
+  $("#export-modal").on('change', '#select-export-option', function() {
+    $self = $(this);
+    switch($self.val()) {
+      case 'bbcode':
+        if(selectedCharacterId > 0) {
+          var requestData = {
+            'action': 'exportItemsByTypeAndCharacter',
+            'characterId': selectedCharacterId,
+            'exportType': $self.val(),
+            'field': 'item_name',
+            'direction': 'asc'
+          }
+          $.post('eqp/requestHandler.php', requestData, function(response) {
+            if(response) {
+              var result = $.parseJSON(response);
+              if(result.success) {
+                $("#export-result").empty().html(result.exportData);
+                $("#select-export-and-copy").show();
+              }
+            }
+          });
+        }
+      break;
+    }
   });
   $(document).on('click', '.button, .sort-button', function() {
     var $self = $(this);
@@ -385,6 +414,18 @@ $(document).ready(function() {
         });
       break;
 
+      case 'export-list-by-character':
+//         selectedCharacterId = $self.data("character-id");
+//         $("#export-modal").toggle('show');
+      break;
+
+      case 'select-export-and-copy':
+        var $temp = $('<input>');
+        $("#export-result").append($temp);
+        $temp.val($("#export-result").text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+      break;
     }
   });
 });

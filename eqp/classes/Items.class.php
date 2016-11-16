@@ -289,6 +289,22 @@ class Items extends EQParser {
       }
     }
   }
+  public function export($args) {
+    if(isset($args) && !empty($args)) {
+      $items = $this->getAll($args);
+      if($items && count($items) > 0) {
+        if(isset($args['export_type']) && $args['export_type']) {
+          switch($args['export_type']) {
+            case 'bbcode':
+              return $this->execute('Export', 'getBBCodeList', $items);
+            break;
+          }
+        }
+      } else {
+        // No Items to Export
+      }
+    }
+  }
 }
 
 
