@@ -121,7 +121,6 @@ class Characters extends EQParser {
            . " (" . implode(', ', $columns) . ")"
            . " VALUES"
            . " ('" . implode("', '", $values) . "')";
-var_dump($sql);
       try {
         if(!$this->db->inTransaction()) $this->db->BeginTransaction();
         $this->db->query($sql);
