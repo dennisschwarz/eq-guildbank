@@ -73,9 +73,9 @@ $dbChangesets = array(
       `internal_character_id` int(11) NOT NULL AUTO_INCREMENT,
       `character_name` varchar(240) NOT NULL,
       `internal_server_id` tinyint(1) NOT NULL,
-      `faction_id` int(11) NOT NULL,
+      `faction_id` int(11) NULL DEFAULT NULL,
       `last_import` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-      `account_id` int(11) NOT NULL COMMENT 'Internal Account ID',
+      `account_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Internal Account ID',
       `server` varchar(80) NULL DEFAULT NULL COMMENT 'Server Name',
       `race` varchar(80) NULL DEFAULT NULL COMMENT 'Character Race',
       `class` varchar(80) NULL DEFAULT NULL COMMENT 'Character Class',
@@ -98,7 +98,8 @@ $dbChangesets = array(
       VALUES
       (NULL, 'Lockjaw', 'TLP', 1),
       (NULL, 'Phinigel', 'TLP', 1),
-      (NULL, 'Ragefire', 'TLP', 1);
+      (NULL, 'Ragefire', 'TLP', 1),
+      (NULL, 'Teek', 'TLP', 1);
     ",
     "DROP TABLE IF EXISTS `tbl_items`;",
     "CREATE TABLE `tbl_items` (

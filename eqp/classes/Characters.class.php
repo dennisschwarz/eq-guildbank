@@ -40,7 +40,7 @@ class Characters extends EQParser {
       }
 
       if(!empty($where)) {
-        $sqlArgs['where'] = ' WHERE ' . implode($where, " AND ");
+        $sqlArgs['where'] = ' WHERE ' . implode(" AND ", $where);
       }
 
       $sql = $this->getSql($sqlArgs);
@@ -70,7 +70,7 @@ class Characters extends EQParser {
         $PDOStatement = $this->db->prepare($sql);
         $PDOStatement->execute();
         if(($result = $PDOStatement->fetch(PDO::FETCH_ASSOC)) != false) {
-          $this->internalLog[] = ('SQL Result: ' . implode($result, ','));
+          $this->internalLog[] = ('SQL Result: ' . implode(',', $result));
           return $result;
         } else {
           $this->logMessage('Character not found!');
@@ -118,10 +118,10 @@ class Characters extends EQParser {
 
       $sql = " INSERT INTO"
            . " " . $this->mainTable
-           . " (" . implode($columns, ', ') . ")"
+           . " (" . implode(', ', $columns) . ")"
            . " VALUES"
-           . " ('" . implode($values, "', '") . "')";
-
+           . " ('" . implode("', '", $values) . "')";
+var_dump($sql);
       try {
         if(!$this->db->inTransaction()) $this->db->BeginTransaction();
         $this->db->query($sql);
@@ -157,7 +157,7 @@ class Characters extends EQParser {
           $sql = " UPDATE"
                . " " . $this->mainTable
                . " SET"
-               . " " . implode($updateColumns, ', ')
+               . " " . implode(', ', $updateColumns)
                . " WHERE internal_character_id = " . $args['internal_character_id'];
 
           try {
@@ -195,7 +195,7 @@ class Characters extends EQParser {
       return false;
     }
 
-    $where = ' WHERE ' . implode($where, ' AND ');
+    $where = ' WHERE ' . implode(' AND ', $where);
 
     $sql = " SELECT 1"
          . " FROM " . $this->getTablePrefix() . "rel_characters_recipes"
@@ -235,9 +235,9 @@ class Characters extends EQParser {
 
     $sql = " INSERT INTO"
          . " " . $this->getTablePrefix() . "rel_characters_recipes"
-         . " (" . implode($columns, ', ') . ")"
+         . " (" . implode(', ', $columns) . ")"
          . " VALUES"
-         . " (" . implode($values, ", ") . ")";
+         . " (" . implode(", ", $values) . ")";
 
     try {
       $PDOStatement = $this->db->prepare($sql);

@@ -8,7 +8,21 @@ if(isset($_POST) && !empty($_POST)) {
   if(isset($_POST['action'])) {
     switch($_POST['action']) {
       case 'checkProfile':
-        if(!($characterInfo = $eqParser->execute('Characters', 'getAll', array('character_name' => $_POST['profileName'])))) {
+        if(isset($_POST['profileName']) && $_POST['profileName'] != '') {
+          $defaultServerName = 'Teek';
+          $defaultCharacterName = $_POST['profileName'];
+          $characterAndServer = explode('_', $_POST['profileName']);
+
+          if (count($characterAndServer) == 1) {
+            $serverName = $defaultServerName;
+          } else if (count($characterAndServer) == 2) {
+            $characterName = $characterAndServer[0];
+            $serverName = $characterAndServer[1];
+          }
+        } else {
+          return false;
+        }
+        if(!($characterInfo = $eqParser->execute('Characters', 'getAll', array('character_name' => $characterName)))) {
           $responseHTML = '<div id="response"></div>'
                         . '<p>This Character does not exist in our Database.<br /><br />Do you want to create the proceed and then import the items?</p>'
                         . '<div id="cancel-import" class="button">Cancel</div>'
@@ -30,9 +44,20 @@ if(isset($_POST) && !empty($_POST)) {
 
       case 'addCharacterAndImport':
         if(isset($_POST['profileName']) && $_POST['profileName'] != '') {
+          $defaultServerName = 'Teek';
+          $defaultCharacterName = $_POST['profileName'];
+          $characterAndServer = explode('_', $_POST['profileName']);
+
+          if(count($characterAndServer) == 1) {
+              $serverName = $defaultServerName;
+          } else if(count($characterAndServer) == 2) {
+              $characterName = $characterAndServer[0];
+              $serverName = $characterAndServer[1];
+          }
+
           $args = array(
-            'character_name' => $_POST['profileName'],
-            'server_name' => 'Phinigel',
+            'character_name' => $characterName,
+            'server_name' => $serverName,
           );
 
           if(($characterInfo = $eqParser->execute('Characters', 'add', $args)) !== false) {
@@ -129,13 +154,13 @@ if(isset($_POST) && !empty($_POST)) {
         if(isset($_POST['characterId']) && (int)$_POST['characterId'] > 0 && ($characterInfo = $eqParser->execute('Characters', 'getOne', (int)$_POST['characterId'])) !== false) {
           $getArgs = array(
             'internal_character_id' => (int)$_POST['characterId'],
-            'group_by' => 'external_item_id',
+            //'group_by' => 'external_item_id',
           );
 
           if((isset($_POST['field']) && $_POST['field'] != '') && (isset($_POST['direction']) && $_POST['direction'] != '')) {
             $getArgs['order_by'] = array(
-              'field' => filter_var(trim($_POST['field']), FILTER_SANITIZE_STRING),
-              'direction' => filter_var(trim($_POST['direction']), FILTER_SANITIZE_STRING),
+              'field' => filter_var(trim($_POST['field']), FILTER_SANITIZE_SPECIAL_CHARS),
+              'direction' => filter_var(trim($_POST['direction']), FILTER_SANITIZE_SPECIAL_CHARS),
             );
           }
 
@@ -161,8 +186,8 @@ if(isset($_POST) && !empty($_POST)) {
           && (isset($_POST['exportType']) && (string)$_POST['exportType'] != '')) {
           $getArgs = array(
             'internal_character_id' => (int)$_POST['characterId'],
-            'export_type' => filter_var(trim($_POST['exportType']), FILTER_SANITIZE_STRING),
-            'group_by' => 'external_item_id'
+            'export_type' => filter_var(trim($_POST['exportType']), FILTER_SANITIZE_SPECIAL_CHARS),
+            //'group_by' => 'external_item_id'
           );
 
           if(isset($_POST['itemIds']) && count($_POST['itemIds']) > 0) {
@@ -170,8 +195,8 @@ if(isset($_POST) && !empty($_POST)) {
 
           if((isset($_POST['field']) && $_POST['field'] != '') && (isset($_POST['direction']) && $_POST['direction'] != '')) {
             $getArgs['order_by'] = array(
-              'field' => filter_var(trim($_POST['field']), FILTER_SANITIZE_STRING),
-              'direction' => filter_var(trim($_POST['direction']), FILTER_SANITIZE_STRING),
+              'field' => filter_var(trim($_POST['field']), FILTER_SANITIZE_SPECIAL_CHARS),
+              'direction' => filter_var(trim($_POST['direction']), FILTER_SANITIZE_SPECIAL_CHARS),
             );
           }
 

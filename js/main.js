@@ -92,24 +92,31 @@ $(document).ready(function() {
             $header.append($selector);
           break;
           case 'bankItems':
-            var $header = $('<h4>bank Items:</h4>');
+            var $header = $('<h4>Bank Items:</h4>');
             $header.on("click", function() {
               $("ul#bankItems").toggle();
             });
             $header.append($selector);
           break;
+          case 'hoardItems':
+            var $header = $('<h4>Hoard Items:</h4>');
+            $header.on("click", function() {
+              $("ul#hoardItems").toggle();
+            });
+            $header.append($selector);
+            break;
         }
 
         if(withItemList) {
           var $list = $('<ul id="'+k+'"></ul>');
           var categoryItems = items[k];
-    
+
           for(var j in categoryItems) {
             var item = categoryItems[j];
             if(item.name.toLowerCase() == 'empty') {
                $item = $('<li><span class="link">'+item.name+'</span></li>');
             } else {
-               $item = $('<li data-item-id="'+item.id+'" class="item"><span class="link"><a href="http://lucy.allakhazam.com/itemraw.html?id='+item.id+'" class="zam-link">'+item.name+'</a></span><span class="count">x'+item.count+'</span></li>');
+               $item = $('<li data-item-id="'+item.id+'" data-item-slot="'+k+'" data-item-key="'+j+'" class="item"><span class="link"><a href="http://lucy.allakhazam.com/itemraw.html?id='+item.id+'" class="zam-link">'+item.name+'</a></span><span class="count">x'+item.count+'</span></li>');
                $item.on("click", function() {
                 var $self = $(this);
                 if(!$self.hasClass("selected")) {
@@ -165,9 +172,7 @@ $(document).ready(function() {
     });
   }
   function importSelectedItems(event) {
-    console.log(event);
     var importData = event.data;
-
     // Check if Profile Exists
     var profileData = {
       'action': 'checkProfile',
@@ -190,7 +195,7 @@ $(document).ready(function() {
               var itemsBlock = items[k];
               for(var j in itemsBlock) {
                 var item = itemsBlock[j];
-                if(item && item.id && parseInt(item.id) == parseInt($self.data("item-id"))) {
+                if(item && item.id && parseInt(item.id) == parseInt($self.data("item-id")) && k == $self.data('item-slot') && parseInt(j) == parseInt($self.data('item-key'))) {
                   selectedItems.push(item);
                 }
               }
@@ -337,6 +342,25 @@ $(document).ready(function() {
     $self = $(this);
     switch($self.val()) {
       case 'bbcode':
+        if(selectedCharacterId > 0) {
+          var requestData = {
+            'action': 'exportItemsByTypeAndCharacter',
+            'characterId': selectedCharacterId,
+            'exportType': $self.val(),
+            'field': 'item_name',
+            'direction': 'asc'
+          }
+          $.post('eqp/requestHandler.php', requestData, function(response) {
+            if(response) {
+              var result = $.parseJSON(response);
+              if(result.success) {
+                $("#export-result").empty().html(result.exportData);
+                $("#select-export-and-copy").show();
+              }
+            }
+          });
+        }
+      case 'csv':
         if(selectedCharacterId > 0) {
           var requestData = {
             'action': 'exportItemsByTypeAndCharacter',

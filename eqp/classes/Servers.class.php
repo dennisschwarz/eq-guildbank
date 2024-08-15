@@ -25,7 +25,7 @@ class Servers extends EQParser {
       if(isset($args['server_name']) && (string)$args['server_name'] != '') {
         $where[] = "tser.server_name LIKE '%" . (string)$args['server_name'] . "%'";
       }
-      $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode($where, ' AND ') : '');
+      $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode(' AND ', $where) : '');
       $sql = $this->getSql($sqlArgs);
 
       try {
@@ -49,7 +49,7 @@ class Servers extends EQParser {
         $PDOStatement = $this->db->prepare($sql);
         $PDOStatement->execute();
         if(($result = $PDOStatement->fetch(PDO::FETCH_ASSOC)) != false) {
-          $this->internalLog[] = ('SQL Result: ' . implode($result, ','));
+          $this->internalLog[] = ('SQL Result: ' . implode(',', $result));
           return $result;
         } else {
           $this->logMessage('Item Type not found!');

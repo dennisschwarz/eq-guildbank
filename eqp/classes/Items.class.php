@@ -34,10 +34,10 @@ class Items extends EQParser {
         $where[] = "tite.external_item_id = " . $args['external_item_id'];
       }
       if(isset($args['external_item_ids']) && is_array($args['external_item_ids']) && !empty($args['external_item_ids']) && count($args['external_item_ids']) > 0) {
-        $where[] = "tite.external_item_id IN (" . implode($args['external_item_ids'], ', ') . ")";
+        $where[] = "tite.external_item_id IN (" . implode(', ', $args['external_item_ids']) . ")";
       }
       if(isset($args['external_type_ids']) && is_array($args['external_type_ids']) && !empty($args['external_type_ids']) && count($args['external_type_ids']) > 0) {
-        $where[] = "ttyp.external_type_id IN (" . implode($args['external_type_ids'], ', ') . ")";
+        $where[] = "ttyp.external_type_id IN (" . implode(', ', $args['external_type_ids']) . ")";
       }
       if(isset($args['internal_character_id']) && (int)$args['internal_character_id'] > 0 && $this->execute('Characters', 'getOne', (int)$args['internal_character_id'])) {
         $where[] = "`internal_character_id` = " . (int)$args['internal_character_id'];
@@ -57,7 +57,7 @@ class Items extends EQParser {
         }
       }
 
-      $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode($where, ' AND ') : '');
+      $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode(' AND ', $where) : '');
 
 
       $sql = $this->getSql($sqlArgs);
@@ -70,6 +70,7 @@ class Items extends EQParser {
           return false;
         }
       } catch (PDOException $e) {
+          var_dump($e->getMessage());
         $this->errorArray = array(
           'class' => 'Categories',
           'function' => 'getAll',
@@ -90,7 +91,7 @@ class Items extends EQParser {
         $PDOStatement = $this->db->prepare($sql);
         $PDOStatement->execute();
         if(($result = $PDOStatement->fetch(PDO::FETCH_ASSOC)) != false) {
-          $this->internalLog[] = ('SQL Result: ' . implode($result, ','));
+          $this->internalLog[] = ('SQL Result: ' . implode(',', $result));
           return $result;
         } else {
           $this->logMessage('Item not found!');
@@ -140,14 +141,14 @@ class Items extends EQParser {
 
       if(isset($args['item_name']) && $args['item_name'] != '') {
         $columns[] = "`item_name`";
-        $values[] = filter_var(trim($args['item_name']), FILTER_SANITIZE_STRING);
+        $values[] = filter_var(trim($args['item_name']), FILTER_SANITIZE_SPECIAL_CHARS);
       } else {
         $this->logMessage('Item Name missing, ABORT.');
         return false;
       }
       if(isset($args['item_location']) && $args['item_location'] != '') {
         $columns[] = "`item_location`";
-        $values[] = filter_var(trim($args['item_location']), FILTER_SANITIZE_STRING);
+        $values[] = filter_var(trim($args['item_location']), FILTER_SANITIZE_SPECIAL_CHARS);
       } else {
         $this->logMessage('Item location missing, ABORT.');
         return false;
@@ -187,9 +188,9 @@ class Items extends EQParser {
       if(!empty($columns)) {
         $sql = " INSERT INTO"
              . " " . $this->mainTable
-             . " (" . implode($columns, ', ') . ")"
+             . " (" . implode(', ', $columns) . ")"
              . " VALUES"
-             . " ('" . implode($values, "', '") . "')";
+             . " ('" . implode("', '", $values) . "')";
 
         try {
           $this->db->query($sql);
@@ -221,7 +222,7 @@ class Items extends EQParser {
       }
 
       if(!empty($where)) {
-        $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode($where, ' AND ') : '');
+        $sqlArgs['where'] = ((!empty($where) && count($where) > 0) ? ' WHERE ' . implode(' AND ', $where) : '');
         $sql = "DELETE FROM " . $this->getTablePrefix() . "tbl_items " . $sqlArgs['where'];
 
         try {
@@ -297,6 +298,10 @@ class Items extends EQParser {
           switch($args['export_type']) {
             case 'bbcode':
               return $this->execute('Export', 'getBBCodeList', $items);
+            break;
+
+            case 'csv':
+              return $this->execute('Export', 'getCsvList', $items);
             break;
           }
         }

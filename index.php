@@ -72,6 +72,7 @@ $eqp->setLogfile('log.txt');
                   <select id="select-export-option">
                     <option value="0">Please select Export Option</option>
                     <option value="bbcode">phpBB Code</option>
+                    <option value="csv">CSV File</option>
                   </select>
                 </div>
               </div>

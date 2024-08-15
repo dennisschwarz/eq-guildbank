@@ -40,6 +40,7 @@ class EQParser {
   public $inventoryItems;
   public $bankItems;
   public $guildbankItems;
+  public $hoardItems;
   public $characterName;
   public $dbItems;
   public $filterType = 'character';
@@ -49,6 +50,7 @@ class EQParser {
     "inventory" => array("general"),
     "bank" => array("bank", "sharedbank"),
     "guildbank" => array("bank", "sharedbank", "general"),
+    "hoard" => array("hoard")
   );
   public $bagSlots = array("general1", "general2", "general3", "general4", "general5", "general6", "general7", "general8");
   public $bankSlots = array("bank1", "bank2", "bank3", "bank4", "bank5", "bank6", "bank7", "bank8", "bank9", "bank10", "bank11", "bank12", "bank13", "bank14", "bank15", "sharedbank1", "sharedbank2");
@@ -137,12 +139,12 @@ class EQParser {
           try {
             $this->db->query("UPDATE `" . $this->getTablePrefix() . "db_revision` SET revision_id = " . $changesetKey);
           } catch (PDOException $e) {
-            $this->internalLog[] = implode(array(
+            $this->internalLog[] = implode(', ', array(
               'class' => 'Main',
               'function' => 'Install',
               'reason' => $e,
               'additional Info' => 'Updating DB Revision'
-            ), ', ');
+            ));
             if($this->showDebug) {
               $this->debug();
             }
@@ -168,7 +170,7 @@ class EQParser {
   }
   public function debug() {
     print '<pre>';
-    var_dump(implode($this->internalLog, "\n"));
+    var_dump(implode("\n", $this->internalLog));
     print '</pre>';
   }
   public function setDebug($value = false) {
@@ -259,6 +261,7 @@ class EQParser {
   
             $filterItem[trim($colName)] = $col;
           }
+
           $result[] = $filterItem;
         }
 
@@ -283,6 +286,7 @@ class EQParser {
       $this->inventoryItems = array();
       $this->bankItems = array();
       $this->guildbankItems = array();
+      $this->hoardItems = array();
 
       foreach($items as $itemKey => $item) {
         if(isset($item['location']) && $item['location'] != '' && $item['location'] !== null) {
@@ -303,6 +307,10 @@ class EQParser {
               case 'guildbank':
                 $this->guildbankItems[] = $item;
               break;
+
+              case 'hoard':
+                $this->hoardItems[] = $item;
+              break;
       
               default:
               break;
@@ -315,22 +323,29 @@ class EQParser {
     }
   }
   private function filterSlot($itemSlot) {
-    foreach($this->excludedSlots['character'] as $slotKey => $excludedSlot) {
-      if(stripos($itemSlot, $excludedSlot) !== false) {
-        return 'character';
+    if($itemSlot !== null) {
+      foreach ($this->excludedSlots['character'] as $slotKey => $excludedSlot) {
+        if (stripos($itemSlot, $excludedSlot) !== false) {
+          return 'character';
+        }
+      }
+      foreach ($this->excludedSlots['inventory'] as $slotKey => $excludedSlot) {
+        if (stripos($itemSlot, $excludedSlot) !== false) {
+          return 'inventory';
+        }
+      }
+      foreach ($this->excludedSlots['bank'] as $slotKey => $excludedSlot) {
+        if (stripos($itemSlot, $excludedSlot) !== false) {
+          return 'bank';
+        }
+      }
+      foreach ($this->excludedSlots['hoard'] as $slotKey => $excludedSlot) {
+        if (stripos($itemSlot, $excludedSlot) !== false) {
+          return 'hoard';
+        }
       }
     }
-    foreach($this->excludedSlots['inventory'] as $slotKey => $excludedSlot) {
-      if(stripos($itemSlot, $excludedSlot) !== false) {
-        return 'inventory';
-      }
-    }
-    foreach($this->excludedSlots['bank'] as $slotKey => $excludedSlot) {
-      if(stripos($itemSlot, $excludedSlot) !== false) {
-        return 'bank';
-      }
-    }
-    return false;
+    return '';
   }
   private function filterItems($items, $filter = array()) {
     if(!empty($items) && count($items) > 0) {
@@ -339,7 +354,7 @@ class EQParser {
         if((!isset($filter['showEmpty']) || $filter['showEmpty'] != 1) && (isset($item['name']) && strtolower($item['name']) == 'empty')) {
           $item = false;
         }
-        if((!isset($filter['showBags']) || $filter['showBags'] != 1) && ($this->filterSlot($item['location']) == 'inventory' || $this->filterSlot($item['location']) == 'bank')) {
+        else if((!isset($filter['showBags']) || $filter['showBags'] != 1) && ($this->filterSlot($item['location']) == 'inventory' || $this->filterSlot($item['location']) == 'bank' || $this->filterSlot($item['location']) == 'hoard')) {
           // Check if item is a Bag by comparing Contents
           // Check if Bag or Bank Slot
           if(in_array(strtolower($item['location']), $this->bagSlots) || in_array(strtolower($item['location']), $this->bankSlots)) {
@@ -373,6 +388,7 @@ class EQParser {
       $result['characterItems'] = $this->filterItems($this->characterItems, array());
       $result['inventoryItems'] = $this->filterItems($this->inventoryItems, array());
       $result['bankItems'] = $this->filterItems($this->bankItems, array());
+      $result['hoardItems'] = $this->filterItems($this->hoardItems, array());
     } else {
       if(isset($filter['unfiltered']) && $filter['unfiltered']) {
         $result = array();

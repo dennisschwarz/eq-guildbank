@@ -7,7 +7,7 @@ class Export extends EQParser {
   public function getBBCodeList($items) {
     if(!empty($items) && count($items) > 0) {
 
-      $result = '[lalelist]<br>';
+      $result = '[longlist]<br>';
 
       foreach($items as $itemKey => $item) {
         $result .= '&nbsp;&nbsp;[r]<br>';
@@ -16,8 +16,19 @@ class Export extends EQParser {
         $result .= '&nbsp;&nbsp;[/r]<br>';
       }
 
-      $result .= '[/lalelist]';
+      $result .= '[/longlist]';
 
+      return $result;
+    }
+  }
+
+  public function getCsvList($items)
+  {
+    if (!empty($items) && count($items) > 0) {
+      $result = 'Name;Link;Count;<br>';
+      foreach ($items as $itemKey => $item) {
+        $result .= $item['name'] . ';https://items.eqresource.com/items.php?id=' . $item['id'] . ';' . $item['count'] . ';<br>';
+      }
       return $result;
     }
   }
