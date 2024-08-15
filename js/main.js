@@ -233,6 +233,7 @@ $(document).ready(function() {
           if(result.success) {
             $("#query-modal .modal-body").html(result.response);
             reloadCharacterDropdown();
+            selectedItems = [];
           }
         }
       });
@@ -262,6 +263,7 @@ $(document).ready(function() {
           if(result.success) {
             $("#query-modal .modal-body").html(result.response);
             reloadCharacterDropdown();
+            selectedItems = [];
           }
         }
       });
